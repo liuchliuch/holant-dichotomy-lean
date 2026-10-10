@@ -1,0 +1,23 @@
+# Local build products and verification tools
+.lake/
+.tools/
+__pycache__/
+*.pyc
+
+# Editor and operating-system files
+.DS_Store
+.AppleDouble/
+._*
+.idea/
+.vscode/
+
+# Manuscript build products
+manuscript/*.aux
+manuscript/*.bbl
+manuscript/*.blg
+manuscript/*.fdb_latexmk
+manuscript/*.fls
+manuscript/*.log
+manuscript/*.out
+manuscript/*.synctex.gz
+manuscript/*.toc

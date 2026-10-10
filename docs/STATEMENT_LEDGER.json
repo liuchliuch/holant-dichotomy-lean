@@ -1,0 +1,2239 @@
+[
+  {
+    "number": "1.1",
+    "kind": "theorem",
+    "title": "Full dichotomy theorem",
+    "labels": [
+      "thm:main"
+    ],
+    "source_line": 444,
+    "referenced_labels": [
+      "subsec:complexity-conventions"
+    ],
+    "lean_declarations": [
+      "Paper2.PublicDichotomy.main_theorem_with_native_recognition"
+    ],
+    "mapping_kind": "unconditional_public_theorem",
+    "lean_files": [
+      "Paper2/PublicNativeClassification.lean"
+    ],
+    "mapping_note": "The ordinary and native dichotomies and actual terminating recognizers are proved for every valid original language. This statement has no unary or accepted-provider parameter.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "2.1",
+    "kind": "proposition",
+    "title": "Finite projective binary groups",
+    "labels": [
+      "prop:finite-pgl2-classification"
+    ],
+    "source_line": 1003,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.SourceFaithful.SourceStatements.FiniteGroups.proposition_2_1"
+    ],
+    "mapping_kind": "direct_source_statement",
+    "lean_files": [
+      "Paper2/SourceFaithful/SourceStatements/FiniteGroupStatements.lean"
+    ],
+    "mapping_note": "Literal finite complex projective-subgroup conjugacy classification with unique model type and cyclic/dihedral parameter, including exact group orders m, 2m, 12, 24 and 60. The endpoint instantiates the bundled Paper1 classification; conjugating matrices are group-theoretic and are not asserted to be legal GO(X) graph operations.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "2.2",
+    "kind": "lemma",
+    "title": "Finite projective-group facts",
+    "labels": [
+      "lem:finite-pgl2-facts"
+    ],
+    "source_line": 1019,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.SourceFaithful.SourceStatements.FiniteGroups.lemma_2_2"
+    ],
+    "mapping_kind": "direct_source_statement",
+    "lean_files": [
+      "Paper2/SourceFaithful/SourceStatements/FiniteGroupStatements.lean"
+    ],
+    "mapping_note": "The proved compound Lemma22 interface instantiated with the actual cyclic group Multiplicative (ZMod m), m≥2, contains every listed Paper2 group fact, together with additional bundled Paper1 clauses. Its dihedral, A4, S4, A5 and projective centralizer facts have no unproved structural callback.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "2.3",
+    "kind": "definition",
+    "title": "Mountain",
+    "labels": [
+      "def:mountain"
+    ],
+    "source_line": 1290,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.IsMountain",
+      "Paper2.isMountain_iff_supportedHalfCharges"
+    ],
+    "mapping_kind": "direct_source_definition_and_equivalence",
+    "mapping_note": "The positive height, original extreme nonvanishing coefficients and unrestricted central support are the literal mountain definition. isMountain_iff_supportedHalfCharges proves its displayed equivalent supported half-charge formulation.",
+    "lean_files": [
+      "Paper2/Mountain.lean"
+    ],
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "2.4",
+    "kind": "remark",
+    "title": "Notation relative to prior work",
+    "labels": [
+      "rem:mwxz-notation"
+    ],
+    "source_line": 1317,
+    "referenced_labels": [],
+    "lean_declarations": [],
+    "mapping_kind": "expository",
+    "mapping_note": "This numbered environment is explanatory prose and is not counted as an independently proved Lean proposition.",
+    "source": "manuscript/paper.tex",
+    "scope": "expository"
+  },
+  {
+    "number": "2.5",
+    "kind": "remark",
+    "title": "Bell notation in Shao--Cai",
+    "labels": [],
+    "source_line": 1363,
+    "referenced_labels": [
+      "eq:bell-matrix-dictionary"
+    ],
+    "lean_declarations": [],
+    "mapping_kind": "expository",
+    "mapping_note": "This numbered environment is explanatory prose and is not counted as an independently proved Lean proposition.",
+    "source": "manuscript/paper.tex",
+    "scope": "expository"
+  },
+  {
+    "number": "2.6",
+    "kind": "remark",
+    "title": "The Shao--Cai \\(f_8\\) core",
+    "labels": [
+      "rem:sc-f8-core"
+    ],
+    "source_line": 1395,
+    "referenced_labels": [
+      "thm:q8-normalized-bell-lift"
+    ],
+    "lean_declarations": [],
+    "mapping_kind": "expository",
+    "mapping_note": "This numbered environment is explanatory prose and is not counted as an independently proved Lean proposition.",
+    "source": "manuscript/paper.tex",
+    "scope": "expository"
+  },
+  {
+    "number": "2.7",
+    "kind": "definition",
+    "title": "Common transformability and \\(K\\)-presentation",
+    "labels": [
+      "def:common-transformability",
+      "def:common-K-presentation"
+    ],
+    "source_line": 1478,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.Tractable.CommonTransformable",
+      "Paper2.Tractable.IsCommonKBasis",
+      "Paper2.Tractable.CommonKPresentationInKCoordinates",
+      "Paper2.SourceFaithful.SourceStatements.CommonKBasis.common_basis_comp_iff",
+      "Paper2.SourceFaithful.SourceStatements.CommonKBasis.commonTransformable_iff_inKCoordinates"
+    ],
+    "mapping_kind": "direct_source_definition_and_equivalence",
+    "mapping_note": "The two exact finite-family definitions include one invertible matrix shared by the mandatory edge and all signature rows. common_basis_comp_iff proves the simultaneous edge/signature condition under M=KU; commonTransformable_iff_inKCoordinates proves the displayed ordinary-to-K presentation equivalence, including exact finite family transport. The actual normalized source K satisfies KᵀK=X literally, so the bridge is valid for arbitrary classes and includes every scalar-/permutation-closed source class.",
+    "lean_files": [
+      "Paper2/Tractable/CommonTransform.lean",
+      "Paper2/SourceFaithful/SourceStatements/CommonKBasis.lean"
+    ],
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "2.8",
+    "kind": "definition",
+    "title": "The predicate \\(\\EOTract\\)",
+    "labels": [
+      "def:eo-tract"
+    ],
+    "source_line": 1539,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.Tractable.EOTract",
+      "Paper2.Tractable.eoTract_empty"
+    ],
+    "mapping_kind": "direct_source_definition",
+    "mapping_note": "The literal finite EO family domain, one shared sign and one shared A/P class precede both family universals; the oriented pairing restriction and triple-xor support condition are concrete. eoTract_empty proves the printed vacuous empty-family convention.",
+    "lean_files": [
+      "Paper2/Tractable/Criteria.lean"
+    ],
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "2.9",
+    "kind": "remark",
+    "title": null,
+    "labels": [],
+    "source_line": 1609,
+    "referenced_labels": [
+      "case:matching"
+    ],
+    "lean_declarations": [],
+    "mapping_kind": "expository",
+    "mapping_note": "This numbered environment is explanatory prose and is not counted as an independently proved Lean proposition.",
+    "source": "manuscript/paper.tex",
+    "scope": "expository"
+  },
+  {
+    "number": "2.10",
+    "kind": "lemma",
+    "title": "Effective algebraic transformability witnesses",
+    "labels": [
+      "lem:algebraic-transform-witness"
+    ],
+    "source_line": 1625,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.SourceFaithful.SourceStatements.AlgebraicWitness.theorem_2_10_descent",
+      "Paper2.SourceFaithful.SourceStatements.AlgebraicWitnessRuntime.theorem_2_10_effective"
+    ],
+    "mapping_kind": "direct_source_theorem",
+    "mapping_note": "The exact source algebraic descent is proved for an arbitrary finite algebraic signature family and edge E, with one truly complex invertible transform shared by the signatures and edge in any of the affine, product or local-affine classes. The effective endpoint fixes actual class-indexed machines before all valid finite inputs/layouts, terminates with literal optional algebraic-witness output, accepts exactly when the complex witness exists, and proves correctness of the exact emitted algebraic root, matrix and inverse bytes. Empty families, singular edges and nullary/zero/duplicate members are retained. Recognition is effective; no uniform polynomial bound in varying language size is claimed.",
+    "lean_files": [
+      "Paper2/SourceFaithful/SourceStatements/AlgebraicWitness.lean",
+      "Paper2/SourceFaithful/SourceStatements/AlgebraicWitnessEffective.lean"
+    ],
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "2.11",
+    "kind": "theorem",
+    "title": "Weighted Eulerian orientations\n\t\t{\\cite{MengWangXia2025EO}; \\cite[Theorems~1.1 and~2.17]{GuanShaoShi2026}}",
+    "labels": [
+      "thm:external-eo"
+    ],
+    "source_line": 1648,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.Paper1Proved.eoProvider"
+    ],
+    "mapping_kind": "proved_source_provider",
+    "lean_files": [
+      "Paper2/Paper1ProvedEOProvider.lean"
+    ],
+    "mapping_note": "The exact preprocessed all-EO source interface is inhabited by actual evaluation and controlled hardness proofs. It is not an EO classifier of arbitrary mixed languages.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "2.12",
+    "kind": "theorem",
+    "title": "Single-weight K-Holant\n\t\t{\\cite[full version, Theorem~31; conference version, Theorem~28]{MengWangXiaZheng2025}}",
+    "labels": [
+      "thm:external-single-weight"
+    ],
+    "source_line": 1657,
+    "referenced_labels": [
+      "thm:external-eo"
+    ],
+    "lean_declarations": [
+      "Paper2.Paper1Proved.singleWeightHard",
+      "Paper2.Paper1Proved.singleWeightProvider"
+    ],
+    "mapping_kind": "proved_source_provider_factory",
+    "lean_files": [
+      "Paper2/Paper1ProvedSingleWeightProvider.lean"
+    ],
+    "mapping_note": "The factory takes named gadget/factor/EO/restriction inputs, all instantiated by proved providers in the unconditional public assembly; it takes no odd/unary theorem.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "2.13",
+    "kind": "theorem",
+    "title": "Odd-arity Holant\n\t\t{\\cite[full version, Theorem~33; conference version, Theorem~30]{MengWangXiaZheng2025}}",
+    "labels": [
+      "thm:external-odd"
+    ],
+    "source_line": 1668,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.Paper1Proved.OddResidue.oddProviderOfUnary",
+      "Paper2.Paper1Proved.OddUnary.UnaryProvider.proved"
+    ],
+    "mapping_kind": "proved_source_provider_factory",
+    "lean_files": [
+      "Paper2/Paper1ProvedOddResidueUnaryReduction.lean",
+      "Paper2/Paper1ProvedOddUnaryComplete.lean"
+    ],
+    "mapping_note": "The ordinary odd theorem is derived from actual gadget/factor/restriction inputs and the independently proved unconditional unary theorem. This is the direction consumed in the public assembly.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "2.14",
+    "kind": "theorem",
+    "title": "Tensor-factor extraction\n\t\t{\\cite[full version, Theorem~32 and Remark~39; conference version,\n\t\t\tTheorem~29]{MengWangXiaZheng2025}}",
+    "labels": [
+      "thm:external-factor"
+    ],
+    "source_line": 1680,
+    "referenced_labels": [
+      "thm:external-eo"
+    ],
+    "lean_declarations": [
+      "Paper2.SourceFaithful.SourceStatements.FactorExtraction.source_2_14",
+      "Paper2.SourceFaithful.SourceStatements.FactorExtraction.source_2_14_exists",
+      "Paper2.Paper1Proved.factorProvider"
+    ],
+    "mapping_kind": "direct_source_theorem_with_proved_internal_public_providers",
+    "lean_files": [
+      "Paper2/SourceFaithful/SourceStatements/FactorExtractionStatement.lean",
+      "Paper2/Paper1ProvedFactorProvider.lean"
+    ],
+    "mapping_note": "The closed source_2_14 packet takes the actual specified nonzero ordered tensor h=a tensor b and exact original/target dictionaries Lambda+h and Lambda+a+b, without a prime-decomposition, preprocessing or provider hypothesis. Outside the original common-one-sided exception it proves both strict public native reductions, including either nullary factor. The exception gives exactly central EO criterion implies original-language FP and its negation implies original-language hardness, retaining unrelated zero/nullary rows and one shared sign/class. source_2_14_exists constructs the finite target dictionary. Actual factor access, tensor-network realization, restriction and executed public output codecs are instantiated internally. The older factorProvider is a secondary factor-closure implementation, not by itself the full arbitrary-specified-two-factor public packet.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "2.15",
+    "kind": "theorem",
+    "title": "Quaternary eight-vertex boundary\n\t\t{\\cite[Theorem~3.1]{CaiFu2023}}",
+    "labels": [
+      "thm:external-eight-vertex"
+    ],
+    "source_line": 1696,
+    "referenced_labels": [
+      "lem:algebraic-transform-witness"
+    ],
+    "lean_declarations": [
+      "Paper2.SourceFaithful.SourceStatements.EightVertexBoundary.theorem_2_15",
+      "Paper2.SourceFaithful.SourceStatements.EightVertexBoundary.theorem_2_15_coverage",
+      "Paper2.SourceFaithful.SourceStatements.EightVertexBoundary.tract_iff_exception"
+    ],
+    "mapping_kind": "direct_source_statement",
+    "mapping_note": "Literal algebraic quaternary eight-vertex table with even support and both endpoints nonzero; no tensor-prime hypothesis. Exception means one common class A/P/L and one actual algebraic invertible U simultaneously containing the transformed X edge UᵀXU and transformed singleton signature U⁻¹q. The exact structural criterion is equivalent to this exception, which yields strict public native FP versus #P-hardness. Coverage supplies an exact singleton language for every such algebraic table.",
+    "lean_files": [
+      "Paper2/SourceFaithful/SourceStatements/EightVertexBoundary.lean",
+      "Paper2/SourceFaithful/SourceStatements/EightVertexBoundaryStructural.lean"
+    ],
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "2.16",
+    "kind": "theorem",
+    "title": "Even-degree counting CSP\n\t\t{\\cite[full version, Theorem~4.1]{CaiLuXia2018RealHolantc}}",
+    "labels": [
+      "thm:external-csp2"
+    ],
+    "source_line": 1713,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.DegreeCSP.SourceEvenCriterion.source_tract_iff_criterion"
+    ],
+    "mapping_kind": "optional_external_reference_with_structural_components",
+    "mapping_note": "This externally cited classification is outside the release scope and is unused by the public main proof. The retained compiled component identifies the exact four original-table structural classes A, P, L and A₂¹, with source phase convention and zero/nullary restoration. This is not reported as a full literal bipartite even-degree CSP hardness classification or complete public complexity/runtime interface.",
+    "lean_files": [
+      "Paper2/DegreeCSP/SourceEvenCriterion.lean"
+    ],
+    "source": "manuscript/paper.tex",
+    "scope": "deferred"
+  },
+  {
+    "number": "2.17",
+    "kind": "theorem",
+    "title": "Degree-multiple counting CSP\n\t\t{\\cite[full version, Theorem~5.3; proof in\n\t\t\tSection~5.5]{CaiFuShao2020Entanglement}}",
+    "labels": [
+      "thm:external-cspq"
+    ],
+    "source_line": 1736,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.DegreeCSP.SourcePhaseCriterion.rho_coe_source",
+      "Paper2.DegreeCSP.SourcePhaseCriterion.rho_primitive",
+      "Paper2.DegreeCSP.SourcePhaseCriterion.criterion_of_allBO"
+    ],
+    "mapping_kind": "optional_external_reference_with_structural_components",
+    "mapping_note": "This externally cited classification is outside the release scope and is unused by the public main proof. The retained compiled structural component records the positive primitive 4q-th root, exact finite common phase family and phase criterion under actual generated block orthogonality and literal X/pin resources. It does not assert the printed pin-free degree-multiple CSP hardness classification or its complete polynomial-time public evaluation interface.",
+    "lean_files": [
+      "Paper2/DegreeCSP/SourcePhaseCriterion.lean"
+    ],
+    "source": "manuscript/paper.tex",
+    "scope": "deferred"
+  },
+  {
+    "number": "2.18",
+    "kind": "theorem",
+    "title": "Recognition and evaluation",
+    "labels": [
+      "thm:predicate-algorithms"
+    ],
+    "source_line": 1752,
+    "referenced_labels": [
+      "subsec:zero-nullary"
+    ],
+    "lean_declarations": [
+      "Paper2.Paper1ProvedRecognition.uniform_recognition",
+      "Paper2.TractableAlgorithms.ordinary_booleanFP_of_tract"
+    ],
+    "mapping_kind": "unconditional_recognition_and_evaluation",
+    "lean_files": [
+      "Paper2/Paper1ProvedRecognition/Source.lean",
+      "Paper2/TractableAlgorithms/Paper1Evaluation.lean"
+    ],
+    "mapping_note": "One actual ordinary recognizer precedes the varying input language; graph evaluation is polynomial for each fixed language. Uniform recognition is effective without a language-size polynomial claim.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "2.19",
+    "kind": "lemma",
+    "title": "Factor closure",
+    "labels": [
+      "lem:factor-saturation",
+      "eq:factor-saturation"
+    ],
+    "source_line": 1774,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.exists_prime_decomposition",
+      "Paper2.Paper1Proved.factorProvider"
+    ],
+    "mapping_kind": "proved_source_provider_and_decomposition",
+    "lean_files": [
+      "Paper2/PrimeFactorization.lean",
+      "Paper2/Paper1ProvedFactorProvider.lean"
+    ],
+    "mapping_note": "Ordered tensor-prime decomposition and actual retained factor-closure reductions are proved. Generic wrappers may retain named provider inputs; the public main assembly supplies proved values.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "2.20",
+    "kind": "lemma",
+    "title": "Downward inheritance",
+    "labels": [
+      "lem:downward-inheritance"
+    ],
+    "source_line": 1805,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.Tractable.downward_inheritance"
+    ],
+    "mapping_kind": "direct_source_theorem",
+    "mapping_note": "The source wrapper accepts both original preprocessed families, their actual inclusion and Tract after the fixed source-K family action. The stronger family monotonicity proof does not need the preprocessing premises.",
+    "lean_files": [
+      "Paper2/Tractable/Downward.lean"
+    ],
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "2.21",
+    "kind": "lemma",
+    "title": "\\(GO(X)\\)-invariance of tractability",
+    "labels": [
+      "lem:GOX-tract-invariance"
+    ],
+    "source_line": 1815,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.Tractable.goX_tract_invariance"
+    ],
+    "mapping_kind": "direct_source_theorem",
+    "mapping_note": "The literal source wrapper accepts a finite preprocessed original family and one actual invertible X-conformal kernel D in GO(X). It proves the equivalence of the two full seven-clause predicates after the fixed source-K action.",
+    "lean_files": [
+      "Paper2/Tractable/Conformal.lean"
+    ],
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "2.22",
+    "kind": "lemma",
+    "title": "Coordinate transport along equivalent augmentations",
+    "labels": [
+      "lem:normalization-ledger",
+      "eq:normalization-ledger"
+    ],
+    "source_line": 1830,
+    "referenced_labels": [
+      "eq:GOX-global-scalar"
+    ],
+    "lean_declarations": [
+      "Paper2.SourceFaithful.SourceStatements.NormalizationLedger.source_2_22_natural",
+      "Paper2.SourceFaithful.SourceStatements.NormalizationLedger.source_2_22",
+      "Paper2.Paper1Proved.normalizationProvider",
+      "Paper2.SourceFaithful.HeightOne.inverse_normalized_retained_stage"
+    ],
+    "mapping_kind": "direct_source_statement_including_potentially_infinite_sequences",
+    "lean_files": [
+      "Paper2/SourceFaithful/SourceStatements/NormalizationLedgerInfinite.lean",
+      "Paper2/SourceFaithful/SourceStatements/NormalizationLedgerStatement.lean",
+      "Paper2/Paper1ProvedNormalizationProvider.lean",
+      "Paper2/SourceFaithful/HeightOneLedger.lean"
+    ],
+    "mapping_note": "The exact source endpoint covers every natural-number index of any potentially infinite permitted sequence, with no termination promise, and also gives every actual finite-prefix packet. It proves transformed original-family retention, arbitrary accumulated GO(X) nonzero conformal multiplier, both strict public encoded reductions, literal projective tensor-over-one-fixed-field representations, actual complete transfer-group conjugation/pullback/range and normalization equality/augmentation inclusion/cumulative monotonicity, original Tract implication, and the actual common basis W=A inverse times V including the edge for every nonzero-scalar-closed class and separately A/P/L. Initialization requires only signature-family equality. The group convention is subgroup closure with the neutral native wire; its agreement with the safe nonempty actual source group and its trivial empty case are proved. The original-field scope is stronger than the printed number-field premise. The finite theorem is a secondary exact endpoint; the retained-stage theorem is an application component.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "2.23",
+    "kind": "theorem",
+    "title": "Binary-equality \\(K\\)-Holant dichotomy",
+    "labels": [
+      "thm:eq2-kholant-dichotomy"
+    ],
+    "source_line": 1919,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.ExactInput.Recognition.literalEqualityDichotomyWithRecognition_2_23"
+    ],
+    "mapping_kind": "unconditional_source_theorem_with_recognition",
+    "lean_files": [
+      "Paper2/ExactInput/Recognition/NativeComplete.lean"
+    ],
+    "mapping_note": "The literal-equality promised domain uses the proved global native recognizer and strict public FP/hardness conclusions. No Paper1NativeRecognitionAccepted argument remains in this endpoint.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "2.24",
+    "kind": "theorem",
+    "title": "Tensor-prime quaternary \\(K\\)-Holant dichotomy",
+    "labels": [
+      "thm:quaternary-kholant-dichotomy"
+    ],
+    "source_line": 1939,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.ExactInput.Recognition.primeQuaternaryDichotomyWithRecognition_2_24"
+    ],
+    "mapping_kind": "unconditional_source_theorem_with_recognition",
+    "lean_files": [
+      "Paper2/ExactInput/Recognition/NativeComplete.lean"
+    ],
+    "mapping_note": "The prime-quaternary promised domain uses the same proved global native recognizer and strict public FP/hardness conclusions.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "2.25",
+    "kind": "corollary",
+    "title": "Eight-vertex \\(K\\)-Holant dichotomy",
+    "labels": [
+      "cor:eight-vertex-complete-closure"
+    ],
+    "source_line": 1952,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.PublicDichotomy.theorem_9_2",
+      "Paper2.SourceFaithful.HeightTwo.eightVertex_classification_preprocessed"
+    ],
+    "mapping_kind": "stronger_public_theorem_covers_complexity_conclusion",
+    "lean_files": [
+      "Paper2/PublicNativeClassification.lean",
+      "Paper2/SourceFaithful/HeightTwo.lean"
+    ],
+    "mapping_note": "The global public native theorem supplies recognition and FP/hardness even without the quaternary promise. The specific eight-vertex structural bridge remains separately named; this entry does not assert that arbitrary signatures are eight-vertex signatures.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "3.1",
+    "kind": "lemma",
+    "title": "Binary interpolation",
+    "labels": [
+      "lem:binary-interpolation"
+    ],
+    "source_line": 2004,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.SourceFaithful.SourceStatements.BinaryInterpolation.source_3_1",
+      "Paper2.SourceFaithful.SourceStatements.BinaryInterpolation.source_3_1_singular",
+      "Paper2.SourceFaithful.SourceStatements.BinaryInterpolation.source_3_1_infinite_order",
+      "Paper2.Paper1Proved.binaryInterpolationProvider"
+    ],
+    "mapping_kind": "direct_source_theorem_with_proved_internal_public_providers",
+    "lean_files": [
+      "Paper2/SourceFaithful/SourceStatements/BinaryInterpolationStatement.lean",
+      "Paper2/Paper1ProvedInterpolationProvider.lean"
+    ],
+    "mapping_note": "The closed source_3_1 packet retains the original family's two actual charge signs and the literal ordered binary. For any specified nonzero unary factors B=u tensor v it constructs the exact retained augmentation containing both factors, with both strict public reductions. For nonsingular transfer B*X of genuinely infinite projective order it constructs an actual nonzero rank-one ordered tensor u tensor v in an exact finite equivalent enlargement. Positive-chain interpolation queries, rational recovery and fixed-field/public root codecs are proved implementations; no incoming preprocessing, prime-factor certificate or provider record is required. Membership after factor closure is explicitly the source's equivalent-current-set convention, not an assertion that the original dictionary already contains the factors. The binaryInterpolationProvider remains a secondary reusable provider interface.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "3.2",
+    "kind": "lemma",
+    "title": "Reduction with at most one \\(\\Delta\\)-vertex",
+    "labels": [
+      "lem:universal-directed-pair"
+    ],
+    "source_line": 2039,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.Paper1Proved.universalPair"
+    ],
+    "mapping_kind": "proved_source_provider",
+    "lean_files": [
+      "Paper2/Paper1ProvedUniversalPairProvider.lean"
+    ],
+    "mapping_note": "The original distinguished-label, at-most-one occurrence problem has an actual finite machine reduction.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "3.3",
+    "kind": "lemma",
+    "title": "Single-occurrence replication",
+    "labels": [
+      "lem:single-occurrence-replication"
+    ],
+    "source_line": 2059,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.SourceFaithful.SourceStatements.Replication.theorem_3_3_literal",
+      "Paper2.SourceFaithful.SourceStatements.Replication.theorem_3_3",
+      "Paper2.Paper1Proved.replication"
+    ],
+    "mapping_kind": "direct_source_statement_with_actual_graph_and_public_premise",
+    "lean_files": [
+      "Paper2/SourceFaithful/SourceStatements/ReplicationStatement.lean",
+      "Paper2/Paper1ProvedOccurrenceProvider.lean"
+    ],
+    "mapping_note": "The literal theorem retains all three printed premises in either ordinary identity-edge or native X wiring: the strict public exactly-one TaggedReduces premise, an actual fixed ordered graph over the original family with native edges and the nonzero copying scalar/step identity, and an actual nonzero exactly-one closure instance. It concludes strict public Problem.Reduces for the literal insert h language to the original language, using actual controlled copying programs and fixed-field/root output converters. Arbitrary r/s including zero, zero/nullary original rows and duplicate table values are retained. Constant root codes of the fixed graph scalar and closure are constructed, rather than supplied as extra hypotheses; no preprocessing, chart, support, nontractability, classifier or source-provider premise replaces the reduction.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "3.4",
+    "kind": "lemma",
+    "title": "Dichotomy with a nonzero unary",
+    "labels": [
+      "lem:common-unary-exit"
+    ],
+    "source_line": 2114,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.Paper1Proved.OddUnary.UnaryProvider.native_classification",
+      "Paper2.Paper1Proved.OddUnary.UnaryProvider.proved"
+    ],
+    "mapping_kind": "unconditional_source_classification",
+    "lean_files": [
+      "Paper2/Paper1ProvedOddUnaryComplete.lean"
+    ],
+    "mapping_note": "The unary classification is proved independently, including W and generalized-equality residual consumers. There is no odd, W, pair-consumer or unary input parameter.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "3.5",
+    "kind": "corollary",
+    "title": "Higher equality supplies unaries",
+    "labels": [
+      "cor:higher-equality-unary"
+    ],
+    "source_line": 2127,
+    "referenced_labels": [
+      "lem:common-unary-exit"
+    ],
+    "lean_declarations": [
+      "Paper2.SourceFaithful.SourceStatements.EqualityPins.corollary_3_5"
+    ],
+    "mapping_kind": "direct_source_theorem",
+    "mapping_note": "The exact source corollary is proved for either original wiring convention. Any literal higher equality member of arity at least four produces a finite retained language containing exactly both literal unit computational pins in addition to all original rows, with strict public polynomial-time reductions in both directions. No preprocessing, assumed binary or supplied pin resource remains. Arbitrary unrelated zero/nullary members survive. Ordinary graph construction, proved controlled pin stages and executed canonical/strict-root codecs discharge the full ordinary interface; native-X uses actual Gram, replication and factor-power graph programs. The source is computational Turing equivalence, not literal equality-only graph realization of either pin.",
+    "lean_files": [
+      "Paper2/SourceFaithful/SourceStatements/EqualityPinsStatement.lean",
+      "Paper2/SourceFaithful/SourceStatements/EqualityPins.lean",
+      "Paper2/SourceFaithful/SourceStatements/OrdinaryEqualityPins.lean"
+    ],
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "3.6",
+    "kind": "lemma",
+    "title": "Substitution of fixed gadgets in a larger signature set",
+    "labels": [
+      "lem:ambient-eo-lifting"
+    ],
+    "source_line": 2174,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.SourceFaithful.SourceStatements.RelativeEOAmbient.source_3_6",
+      "Paper2.SourceFaithful.SourceStatements.RelativeEOAmbient.source_3_6_to",
+      "Paper2.SourceFaithful.SourceStatements.RelativeEOAmbient.source_3_6_hardness",
+      "Paper2.RelativeEO.ambient_lifting",
+      "Paper2.RelativeEO.ambient_lifting_to",
+      "Paper2.RelativeEO.ambient_hardness"
+    ],
+    "mapping_kind": "direct_source_theorem_with_proved_internal_public_providers",
+    "mapping_note": "The closed source_3_6 endpoint takes only the original exact ambient language, source-family inclusion and actual finite DirectDerivation. It retains the same ordered native-X networks and nonzero scales, constructs the exact original-family union with all generated tables, proves its strict public reduction to the original language and transfers any actual hard source sublanguage. source_3_6_to covers any exact representation of that union. The direct-gadget and restriction providers are proved internally by executed fixed-field/root codec transport, with no caller EO, preprocessing or provider premise. Earlier ambient_lifting/ambient_hardness interfaces remain secondary parameterized helpers; they are not independently closed public statements.",
+    "lean_files": [
+      "Paper2/SourceFaithful/SourceStatements/RelativeEOAmbientStatement.lean",
+      "Paper2/RelativeEO/AmbientLifting.lean"
+    ],
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "3.7",
+    "kind": "theorem",
+    "title": "Hardness from an EO signature outside \\(\\mathcal B_{\\rm ARS}\\)",
+    "labels": [
+      "thm:hc-relative-eo-terminal"
+    ],
+    "source_line": 2205,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.SourceFaithful.RelativeEO.relative_terminal",
+      "Paper2.SourceFaithful.RelativeEO.realized_relative_terminal"
+    ],
+    "mapping_kind": "proved_source_theorem_with_instantiated_providers",
+    "lean_files": [
+      "Paper2/SourceFaithful/RelativeEO/Terminal.lean"
+    ],
+    "mapping_note": "The arbitrary positive-arity EO terminal is proved by strong descent on actual graph outputs; named source-provider parameters are instantiated by proved values in the public closure.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "3.8",
+    "kind": "lemma",
+    "title": "Complementary quaternaries supply a unary",
+    "labels": [
+      "lem:hc-rel-complementary-unary"
+    ],
+    "source_line": 2219,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.SourceFaithful.RelativeEO.complementary_supplies_pins"
+    ],
+    "mapping_kind": "proved_source_theorem_with_instantiated_providers",
+    "lean_files": [
+      "Paper2/SourceFaithful/RelativeEO/WeightedComplementaryExit.lean"
+    ],
+    "mapping_note": "Two actual copies, the exact directed-pair convention and factor extraction supply both literal pins; this is the weighted ordered support case.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "3.9",
+    "kind": "lemma",
+    "title": "EO alternative",
+    "labels": [
+      "lem:hc-rel-mwx"
+    ],
+    "source_line": 2278,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.SourceFaithful.RelativeEO.realized_isARSProduct",
+      "Paper2.RelativeEO.IsARSProduct.projectiveARS"
+    ],
+    "mapping_kind": "stronger_terminal_and_algebraic_scalar_bridge",
+    "lean_files": [
+      "Paper2/SourceFaithful/RelativeEO/Terminal.lean",
+      "Paper2/RelativeEO/ARSProductPhase.lean"
+    ],
+    "mapping_note": "In the nonhard branch the proved terminal gives the exact algebraic ARS product class, which implies the projective-ARS conclusion. The proof uses strong graph descent rather than assuming the cited finite generating process.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "3.10",
+    "kind": "lemma",
+    "title": "ARS alternative",
+    "labels": [
+      "lem:hc-rel-cfs"
+    ],
+    "source_line": 2423,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.SourceFaithful.RelativeEO.ars_relative_terminal"
+    ],
+    "mapping_kind": "proved_source_theorem_with_instantiated_providers",
+    "lean_files": [
+      "Paper2/SourceFaithful/RelativeEO/ARSTerminal.lean"
+    ],
+    "mapping_note": "The arbitrary-arity ARS terminal is proved by an actual two-copy Gram graph and finite Cauchy-Schwarz factorization, replacing the cited CFS descent.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "3.11",
+    "kind": "remark",
+    "title": "Scope of the literature inputs",
+    "labels": [],
+    "source_line": 2518,
+    "referenced_labels": [
+      "lem:ambient-eo-lifting",
+      "thm:external-factor"
+    ],
+    "lean_declarations": [],
+    "mapping_kind": "expository",
+    "mapping_note": "This numbered environment is explanatory prose and is not counted as an independently proved Lean proposition.",
+    "source": "manuscript/paper.tex",
+    "scope": "expository"
+  },
+  {
+    "number": "3.12",
+    "kind": "remark",
+    "title": "Simultaneous transformation of the edge and signature",
+    "labels": [
+      "def:equality-anchor"
+    ],
+    "source_line": 2532,
+    "referenced_labels": [
+      "lem:equality-anchor"
+    ],
+    "lean_declarations": [],
+    "mapping_kind": "expository",
+    "mapping_note": "This numbered environment is explanatory prose and is not counted as an independently proved Lean proposition.",
+    "source": "manuscript/paper.tex",
+    "scope": "expository"
+  },
+  {
+    "number": "3.13",
+    "kind": "lemma",
+    "title": "Dichotomy from a transformed quaternary equality",
+    "labels": [
+      "lem:equality-anchor"
+    ],
+    "source_line": 2540,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.PublicDichotomy.native_dichotomy",
+      "Paper2.Paper1Proved.equalityAnchor"
+    ],
+    "mapping_kind": "stronger_public_theorem_covers_complexity_conclusion",
+    "lean_files": [
+      "Paper2/PublicDichotomyComplete.lean",
+      "Paper2/Paper1ProvedClassification.lean"
+    ],
+    "mapping_note": "The source complexity conclusion is covered by the independently proved unconditional native_dichotomy for every original finite language: either Tract(kImage L) with the strict native FP evaluator, or not Tract(kImage L) with strict native SharpP hardness. Thus the source transformed-quaternary hypothesis is sufficient without being needed by this stronger conclusion. The separately listed equalityAnchor is only the binary literal-equality structural bridge HasLiteralEquality L → (Tract(kImage L) ↔ TractX(kImage L)). It does not implement or directly expose the source condition that one arbitrary U simultaneously transforms the native edge to a nonzero Eq2 multiple and the quaternary signature to a nonzero Eq4 multiple. This entry does not claim a standalone local simultaneous-transformation wrapper.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "3.14",
+    "kind": "lemma",
+    "title": "Dichotomy with a generalized equality",
+    "labels": [
+      "lem:pure-ge"
+    ],
+    "source_line": 2562,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.SourceFaithful.generalized_equality_relative_terminal",
+      "Paper2.Paper1Proved.OddUnary.IsotropicGeneralizedEqualityStage.GeneralizedEqualitySource.hard"
+    ],
+    "mapping_kind": "proved_stronger_relative_terminal",
+    "lean_files": [
+      "Paper2/SourceFaithful/GeneralizedEqualityTerminal.lean",
+      "Paper2/Paper1ProvedOddUnaryGeneralizedEqualityTerminal.lean"
+    ],
+    "mapping_note": "The native relative terminal covers every arity at least three through an actual complementary EO graph; generalized equality supplies both charge signs. The second endpoint is the independent controlled ordinary consumer used to close the unary proof, including all arities.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "3.15",
+    "kind": "lemma",
+    "title": "Dichotomy from a two-point Walsh factor",
+    "labels": [
+      "lem:walsh-ge-terminal"
+    ],
+    "source_line": 2577,
+    "referenced_labels": [
+      "lem:equality-anchor"
+    ],
+    "lean_declarations": [
+      "Paper2.SourceFaithful.SourceStatements.TwoPointWalsh.source_3_15",
+      "Paper2.SourceFaithful.SourceStatements.TwoPointWalsh.factor_stage_root_anchor"
+    ],
+    "mapping_kind": "direct_source_theorem",
+    "mapping_note": "The literal source tensor-factor hypothesis is recorded in FactorStage: a finite strict public native-X equivalent enlargement contains an actual nonzero signature with an arbitrary ordered tensor decomposition, full nonzero scale, and a selected even-arity two-point Walsh factor of arity at least four. The classification disjunction is a stronger consequence of the independently proved unconditional public native dichotomy. The additional root-of-unity K-anchor clause is independently constructive: controlled actual factor extraction followed by actual pair, loop and finite phase-order graphs yields a retained strict equivalent enlargement, exact U=K pullback edge equality and a nonzero quaternary equality scale. No four-port-only rotation-menu or free tensor/binary resource is assumed.",
+    "lean_files": [
+      "Paper2/SourceFaithful/SourceStatements/TwoPointWalshStatement.lean",
+      "Paper2/SourceFaithful/SourceStatements/TwoPointWalsh.lean",
+      "Paper2/SourceFaithful/SourceStatements/TwoPointWalshFactorAccess.lean"
+    ],
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "4.1",
+    "kind": "lemma",
+    "title": "Producing the gcd-height signature or both point masses",
+    "labels": [
+      "lem:charge-bridge"
+    ],
+    "source_line": 2648,
+    "referenced_labels": [
+      "lem:downward-inheritance",
+      "lem:common-unary-exit"
+    ],
+    "lean_declarations": [
+      "Paper2.ChargeBridge.literal_charge_bridge",
+      "Paper2.ChargeBridge.nontractable_charge_bridge"
+    ],
+    "mapping_kind": "direct_source_theorem_with_instantiated_providers",
+    "mapping_note": "literal_charge_bridge derives the positive gcd of the actual supported half-charges, divisibility of every input coefficient and a strict equivalent literal enlargement by either a height-gcd mountain or both unit computational pins. nontractable_charge_bridge obtains the printed hardness exit from the independently proved unary classification. Named direct-gadget, factor, restriction and unary providers are instantiated by proved implementations in the public assembly.",
+    "lean_files": [
+      "Paper2/ChargeBridgeReduction.lean"
+    ],
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "4.2",
+    "kind": "remark",
+    "title": null,
+    "labels": [],
+    "source_line": 2770,
+    "referenced_labels": [
+      "lem:charge-bridge"
+    ],
+    "lean_declarations": [],
+    "mapping_kind": "expository",
+    "mapping_note": "This numbered environment is explanatory prose and is not counted as an independently proved Lean proposition.",
+    "source": "manuscript/paper.tex",
+    "scope": "expository"
+  },
+  {
+    "number": "5.1",
+    "kind": "theorem",
+    "title": "Dichotomy with a height-one mountain",
+    "labels": [
+      "cor:height-one-complete"
+    ],
+    "source_line": 2805,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.PublicDichotomy.native_dichotomy",
+      "Paper2.SourceFaithful.HeightOne.mountain_classification_preprocessed",
+      "Paper2.SourceFaithful.Synthesis.mountain_classification"
+    ],
+    "mapping_kind": "stronger_unconditional_public_conclusion",
+    "lean_files": [
+      "Paper2/PublicDichotomyComplete.lean",
+      "Paper2/SourceFaithful/HeightOneComplete.lean",
+      "Paper2/SourceFaithful/Synthesis/MountainInterface.lean"
+    ],
+    "mapping_note": "The stronger unconditional PublicDichotomy.native_dichotomy proves Tract(kImage L) or strict public native-X hardness for every original finite algebraic language. It therefore proves the complete printed height-one conclusion without requiring preprocessing or whole-language evenness. The independently proved height-one and mountain routes remain secondary mappings at their actual preprocessed/even-language scopes.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "5.2",
+    "kind": "remark",
+    "title": "Relation to binary-signature classifications",
+    "labels": [],
+    "source_line": 2838,
+    "referenced_labels": [
+      "eq:transfer-reversal"
+    ],
+    "lean_declarations": [],
+    "mapping_kind": "expository",
+    "mapping_note": "This numbered environment is explanatory prose and is not counted as an independently proved Lean proposition.",
+    "source": "manuscript/paper.tex",
+    "scope": "expository"
+  },
+  {
+    "number": "5.3",
+    "kind": "lemma",
+    "title": "Bounded torsion",
+    "labels": [
+      "lem:bounded-torsion"
+    ],
+    "source_line": 2853,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.HeightOne.GroupSplit.provedBoundedTorsion",
+      "Paper2.HeightOne.GroupSplit.ncard_projective_image_le_uniformBound"
+    ],
+    "mapping_kind": "proved_source_theorem_and_quantitative_strengthening",
+    "lean_files": [
+      "Paper2/HeightOne/GroupSplit/Paper1Proved.lean",
+      "Paper2/HeightOne/UniformBound/Main.lean"
+    ],
+    "mapping_note": "Finiteness is proved from the bundled source theorem and actual subgroup construction; the independently proved uniform bound depends only on the fixed original rational-field degree.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "5.4",
+    "kind": "theorem",
+    "title": "Weighted equality or an odd cyclic or dihedral group",
+    "labels": [
+      "thm:finite-group-split"
+    ],
+    "source_line": 2882,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.SourceFaithful.SourceStatements.WeightedEqualityStage.theorem_5_4",
+      "Paper2.SourceFaithful.SourceStatements.WeightedEqualityStage.adjoin_weighted_equality"
+    ],
+    "mapping_kind": "direct_source_statement",
+    "mapping_note": "The original finite family, original height-one mountain and safety of every nonzero directly realizable binary imply an actual finite equivalent stage containing a literal nonsingular weighted equality, or the original odd cyclic/dihedral normalized transfer-group alternative. The stage retains all original rows and supplies both strict public native reductions through the executed graph and output codecs. The finite-group provider is the independently proved bundled Paper1 theorem; no preprocessing, free factor, accepted-provider or realizability callback is an input.",
+    "lean_files": [
+      "Paper2/SourceFaithful/SourceStatements/WeightedEqualityStage.lean"
+    ],
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "5.5",
+    "kind": "definition",
+    "title": "Equivalent updates with strict progress",
+    "labels": [
+      "def:height-one-outer-successor"
+    ],
+    "source_line": 3092,
+    "referenced_labels": [
+      "lem:normalization-ledger"
+    ],
+    "lean_declarations": [
+      "Paper2.SourceFaithful.HeightOne.PrimeStage",
+      "Paper2.SourceFaithful.HeightOne.PrimeStage.measure"
+    ],
+    "mapping_kind": "proved_concrete_stage_definition",
+    "lean_files": [
+      "Paper2/SourceFaithful/HeightOneProgress.lean"
+    ],
+    "mapping_note": "Actual retained equivalent languages carry the fixed original field, group bound, least prime arity and a natural-number strict measure.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "5.6",
+    "kind": "lemma",
+    "title": "Termination of the strict updates",
+    "labels": [
+      "lem:height-one-progress-well-founded"
+    ],
+    "source_line": 3127,
+    "referenced_labels": [
+      "lem:normalization-ledger",
+      "lem:height-one-card-saturation"
+    ],
+    "lean_declarations": [
+      "Paper2.HeightOne.GroupSplit.no_infinite_fixed_field_updates",
+      "Paper2.SourceFaithful.HeightOne.iteration_reaches_stable"
+    ],
+    "mapping_kind": "proved_source_termination_and_actual_iteration",
+    "lean_files": [
+      "Paper2/HeightOne/UniformBound/Progress.lean",
+      "Paper2/SourceFaithful/HeightOneIteration.lean"
+    ],
+    "mapping_note": "The field/group bound and every actual successor are proved; no termination, successful update or stable-stage conclusion is assumed.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "5.7",
+    "kind": "theorem",
+    "title": "The odd-dihedral case",
+    "labels": [
+      "thm:odd-dihedral"
+    ],
+    "source_line": 3201,
+    "referenced_labels": [
+      "lem:normalization-ledger",
+      "thm:finite-group-split",
+      "def:height-one-outer-successor"
+    ],
+    "lean_declarations": [
+      "Paper2.PublicDichotomy.native_dichotomy",
+      "Paper2.SourceFaithful.HeightOne.StableNormalizedStage.dihedral_quaternary_terminal",
+      "Paper2.SourceFaithful.HeightOne.StableNormalizedStage.dihedral_minArity_eq_four"
+    ],
+    "mapping_kind": "stronger_unconditional_public_conclusion",
+    "lean_files": [
+      "Paper2/PublicDichotomyComplete.lean",
+      "Paper2/SourceFaithful/HeightOneStableAnalytic.lean",
+      "Paper2/SourceFaithful/HeightOneComplete.lean"
+    ],
+    "mapping_note": "The stronger unconditional PublicDichotomy.native_dichotomy proves the source's first permitted outcome for the current finite algebraic language: native-X hardness or Tract of its K-image. This proves the printed disjunction without a normalized-stage or finite-group premise. The stable odd-dihedral minimum-arity and terminal declarations remain secondary constructive components. This correspondence does not separately assert the source's arbitrary GO(X) strict-successor or same-coordinate saturated-family alternatives.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "5.8",
+    "kind": "lemma",
+    "title": "Finite recursive contraction and factor extraction",
+    "labels": [
+      "lem:height-one-card-saturation"
+    ],
+    "source_line": 3270,
+    "referenced_labels": [
+      "lem:normalization-ledger",
+      "lem:factor-saturation",
+      "def:height-one-outer-successor"
+    ],
+    "lean_declarations": [
+      "Paper2.PublicDichotomy.native_dichotomy",
+      "Paper2.SourceFaithful.HeightOne.card_saturation_trichotomy",
+      "Paper2.SourceFaithful.HeightOne.complete_card_saturation"
+    ],
+    "mapping_kind": "stronger_unconditional_public_conclusion",
+    "lean_files": [
+      "Paper2/PublicDichotomyComplete.lean",
+      "Paper2/SourceFaithful/HeightOneCardSaturation.lean"
+    ],
+    "mapping_note": "The stronger unconditional PublicDichotomy.native_dichotomy proves the source's first permitted terminal outcome for every original finite algebraic language, so it implies the complete printed trichotomy. The actual finite recursive saturation declarations remain secondary constructive components: they retain full factor closure, fixed-field pullback and group/minimum comparisons in their normalized diagonal-coordinate scope. This correspondence does not independently claim the printed arbitrary GO(X) successor or same-coordinate saturation wrapper.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "5.9",
+    "kind": "lemma",
+    "title": "Shared cyclic phase pencil, including zeros",
+    "labels": [
+      "lem:odd-dih-RN"
+    ],
+    "source_line": 3437,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.HeightOne.PhaseCards.provedPhasePencil"
+    ],
+    "mapping_kind": "proved_source_phase_pencil_provider",
+    "lean_files": [
+      "Paper2/HeightOne/PhaseCards/Paper1Pencil.lean"
+    ],
+    "mapping_note": "The exact algebraic cyclic pencil including zero coordinates is supplied by the bundled proved Paper1 theorem, with matrix signs explicitly checked.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "5.10",
+    "kind": "lemma",
+    "title": "Walsh parity from contractions",
+    "labels": [
+      "lem:odd-dih-all-arity-parity"
+    ],
+    "source_line": 3456,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.SourceFaithful.SourceStatements.TypeParityStatement.lemma_5_10"
+    ],
+    "mapping_kind": "direct_source_statement",
+    "mapping_note": "Literal statement for arbitrary nonzero positive even-arity algebraic f and an odd cyclic or dihedral group with fixed nonsingular ordered representatives and actual nonzero scales. At arity two the premise is membership of the literal Walsh transfer in that group; at higher arity the source premise ranges over all ordered distinct-port contractions, all representatives, both orientations, and all positive ordered prime factors of every nonzero card. The conclusion is even Walsh parity for the cyclic case and one Walsh parity for the dihedral case. There is no source-language safety or graph-realizability hypothesis.",
+    "lean_files": [
+      "Paper2/SourceFaithful/SourceStatements/TypeParityStatement.lean"
+    ],
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "5.11",
+    "kind": "lemma",
+    "title": "Closure of \\(\\mathcal P_N\\) under contractions",
+    "labels": [
+      "lem:phase-product-closure"
+    ],
+    "source_line": 3564,
+    "referenced_labels": [
+      "eq:odd-dih-kernels"
+    ],
+    "lean_declarations": [
+      "Paper2.SourceFaithful.SourceStatements.source_5_11",
+      "Paper2.HeightOne.PhaseCards.PhaseProduct.scale",
+      "Paper2.HeightOne.PhaseCards.PhaseProduct.reindex",
+      "Paper2.HeightOne.PhaseCards.PhaseProduct.tensor",
+      "Paper2.SourceFaithful.SourceStatements.PhaseProductDecomposition.phaseProduct_of_prime_factors",
+      "Paper2.SourceFaithful.SourceStatements.source_5_11_prime_factors"
+    ],
+    "mapping_kind": "direct_source_closure_and_exact_final_prime_factor_clause",
+    "lean_files": [
+      "Paper2/SourceFaithful/SourceStatements/PhaseProductContractionStatement.lean",
+      "Paper2/HeightOne/PhaseCards/PhaseProduct.lean",
+      "Paper2/SourceFaithful/SourceStatements/PhaseProductPrimeAssembly.lean"
+    ],
+    "mapping_note": "The exact closure theorem quantifies arbitrary finite original port types, every ordered pair of distinct ports, and every root phase, and proves plus/minus and both transpose contractions remain in the literal PhaseProduct class. The actual original partition is treated both within one block and across distinct blocks, retaining all other blocks, the full scalar and zero/nullary output. Nonzero scalar, permutation and disjoint tensor closure are separately supplied by the literal PhaseProduct APIs. The printed final clause is exactly phaseProduct_of_prime_factors: positive tensor-prime factors with Walsh tensors in P_N imply the WHOLE contraction Walsh tensor is in P_N; a genuine ordered prime decomposition is constructed, and zero/nullary cases require no extra premise. source_5_11_prime_factors is listed only as an additional raw-prime-membership to subsequent-xor-contraction theorem, not as a substitute for the printed final Walsh clause.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "5.12",
+    "kind": "lemma",
+    "title": "Shared cyclic quaternary family",
+    "labels": [
+      "lem:odd-cyc-q4-family",
+      "eq:odd-cyc-q4-nonzero-endpoints"
+    ],
+    "source_line": 3653,
+    "referenced_labels": [
+      "eq:odd-dih-q4-coordinates"
+    ],
+    "lean_declarations": [
+      "Paper2.SourceFaithful.SourceStatements.PhaseProductParity.source_5_12_literal",
+      "Paper2.SourceFaithful.SourceStatements.PhaseProductParity.literal_cyclic_iff",
+      "Paper2.SourceFaithful.SourceStatements.PhaseProductParity.walshTransfer_cyclic_iff",
+      "Paper2.SourceFaithful.SourceStatements.PhaseProductParity.source_5_12_native",
+      "Paper2.SourceFaithful.SourceStatements.PhaseProductParity.source_5_12_representatives",
+      "Paper2.SourceFaithful.SourceStatements.PhaseProductParity.cyclic_rows_iff_normalForm"
+    ],
+    "mapping_kind": "direct_source_equivalence_with_literal_nonsingularity_and_transfer_membership",
+    "lean_files": [
+      "Paper2/SourceFaithful/SourceStatements/PhaseProductParityLiteralCyclic.lean",
+      "Paper2/SourceFaithful/SourceStatements/PhaseProductParityTransfer.lean",
+      "Paper2/SourceFaithful/SourceStatements/PhaseProductParityRepresentatives.lean",
+      "Paper2/SourceFaithful/SourceStatements/PhaseProductParityRows.lean"
+    ],
+    "mapping_note": "The primary literal original-signature endpoint retains the specified binary representatives with Walsh matrices kappa_s D_s Z and nonzero scales, and the quaternary Walsh even-support hypothesis. For every original ordered selected pair, root phase and every actual residual-port equivalence to Fin 2, it tests that the actual native contraction is zero or its coefficient matrix has nonzero determinant and literal cyclic Walsh transfer membership. The proved cyclic transfer dictionary and literal_cyclic_iff connect this exact source wording to the coordinate endpoint in both directions. The conclusion is an iff with all printed shared coefficient alternatives: both endpoints live with one common root lambda and each central pair zero or (-p*lambda/alpha,-p*alpha), or both endpoints zero and each central pair zero or rho*(1,alpha), rho nonzero. Exactly one live endpoint is excluded. The exact representative analysis scale is 4*kappa_s. The full converse holds at every N >= 3; no oddness, global group classification, whole-family safety, processed stage, minimum-prime or accepted-provider premise is imposed. The older analytic/native coordinate endpoints remain secondary components.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "5.13",
+    "kind": "proposition",
+    "title": "Dihedral quaternary classification",
+    "labels": [
+      "prop:odd-dih-q4",
+      "eq:odd-dih-q4-one-block",
+      "eq:odd-dih-q4-two-block"
+    ],
+    "source_line": 3706,
+    "referenced_labels": [
+      "cond:height-one-contractions",
+      "eq:odd-dih-q4-one-block",
+      "eq:odd-dih-q4-two-block"
+    ],
+    "lean_declarations": [
+      "Paper2.SourceFaithful.SourceStatements.PhaseProductParity.source_5_13_conditionC",
+      "Paper2.SourceFaithful.SourceStatements.PhaseProductParity.source_5_13_conditionC_prime_iff",
+      "Paper2.SourceFaithful.SourceStatements.PhaseProductParity.native_factor_condition_iff",
+      "Paper2.SourceFaithful.SourceStatements.PhaseProductParity.binary_factor_condition_iff",
+      "Paper2.SourceFaithful.SourceStatements.PhaseProductParity.walshTransfer_dihedral_iff",
+      "Paper2.SourceFaithful.SourceStatements.PhaseProductParity.source_5_13_native",
+      "Paper2.SourceFaithful.SourceStatements.PhaseProductParity.source_5_13_converse",
+      "Paper2.SourceFaithful.SourceStatements.PhaseProductParity.source_5_13_native_prime_iff",
+      "Paper2.SourceFaithful.SourceStatements.PhaseProductParity.source_5_13_phaseProduct_iff"
+    ],
+    "mapping_kind": "direct_source_statement_with_actual_prime_factor_condition_and_converse",
+    "lean_files": [
+      "Paper2/SourceFaithful/SourceStatements/PhaseProductParityFactorCondition.lean",
+      "Paper2/SourceFaithful/SourceStatements/PhaseProductParityTransfer.lean",
+      "Paper2/SourceFaithful/SourceStatements/PhaseProductParityStatement.lean",
+      "Paper2/SourceFaithful/SourceStatements/PhaseProductParityNative.lean",
+      "Paper2/SourceFaithful/SourceStatements/PhaseProductParityForms.lean"
+    ],
+    "mapping_note": "The primary source_5_13_conditionC endpoint takes the literal original native condition (C): each card is zero or every factor in every actual positive-arity ordered tensor-prime decomposition has arity two, nonzero determinant and literal dihedral Walsh transfer membership. It retains every original ordered port pair, each specified rotation/reflection representative with its nonzero scale, and all four native kernel orientations. The explicit binary_factor_condition_iff/native_factor_condition_iff proofs establish the factor-to-whole-binary implication and its converse using actual prime decomposition existence, the retained unit scale and actual port permutation; the transfer dictionary proves the exact group condition. No caller factorization or whole-binary classification certificate is supplied. At odd N >= 3 and nonzero original q, the endpoint proves one literal Walsh parity, the displayed one- or two-complementary-pair coefficient forms, literal P_N membership and actual pair cardinality one or two. The full contraction converse includes distinct-block cards. The additional conditionC_prime_iff proves genuine primeness of the original tensor iff its Walsh table has the one-pair form, treating every actual positive ordered cut and transporting primeness by the invertible Walsh action. Including zero, the local whole-binary class is exactly P_N. The original factor-condition and transfer-dictionary obligations are discharged; the native/local endpoints remain secondary components.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "5.14",
+    "kind": "theorem",
+    "title": "Six-port factorization from contractions",
+    "labels": [
+      "thm:odd-dih-q6-base"
+    ],
+    "source_line": 3791,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.SourceFaithful.SourceStatements.SixPortBinary.source_5_14",
+      "Paper2.SourceFaithful.SourceStatements.SixPortBinary.source5_14_all_xor_cards",
+      "Paper2.HeightOne.Dihedral.minimum_six_binary_decomposition"
+    ],
+    "mapping_kind": "direct_source_statement_with_weaker_order_hypothesis",
+    "lean_files": [
+      "Paper2/SourceFaithful/SourceStatements/SixPortBinaryStatement.lean",
+      "Paper2/HeightOne/Dihedral/SixPortActual.lean"
+    ],
+    "mapping_note": "The standalone original-signature theorem takes only N >= 3 and the source normalized oriented plus/minus Walsh contraction hypothesis. BinaryPhaseProduct is literally zero or an actual pair partition into offset two-point phase blocks with PhaseRatio in -mu_N. It proves f = 0 or an exact ordered tensor decomposition with count = 3, scale = 1, value = f, and a nonzero determinant for every actual binary factor. The nonzero logical ratios are retained through xor shifts and Walsh action, and the global scalar is proved absorbed into one factor. No finite-language, processing, minimum-prime, safety, group classification or realization assumption is supplied. Oddness is unnecessary for this stronger result. The existing minimum-stage declaration remains a secondary application component.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "5.15",
+    "kind": "lemma",
+    "title": "Three matching products on a line",
+    "labels": [
+      "lem:odd-dih-three-coset-circuit"
+    ],
+    "source_line": 3862,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.SourceFaithful.SourceStatements.source_5_15",
+      "Paper2.SourceFaithful.SourceStatements.same_support_three_matching_products",
+      "Paper2.SourceFaithful.SourceStatements.different_support_three_products_four_cycle",
+      "Paper2.SourceFaithful.SourceStatements.different_support_common_edge_factors"
+    ],
+    "mapping_kind": "stronger_direct_source_theorem",
+    "mapping_note": "source_5_15 proves both complete alternatives for actual arbitrary positive even-arity nonsingular monomial matching products on their original ordered ports. The same-support case derives both ordered edge alignments and the single Segre ruling. The other case derives the exact half-size support intersection, three distinct pairings on four distinct original ports, literal agreement of every outside matched edge, and projective equality of every actual outside binary factor after its original endpoint orientation is recovered. No support, cancellation, alignment or common-factor witness is supplied. The theorem is stronger by permitting proportional endpoints at positive arity; the printed pairwise-nonproportional premise rules out the empty-arity case.",
+    "lean_files": [
+      "Paper2/SourceFaithful/SourceStatements/ThreeMatchingLineStatement.lean",
+      "Paper2/SourceFaithful/SourceStatements/ThreeMatchingLine.lean",
+      "Paper2/SourceFaithful/SourceStatements/MatchingCosetFourCycle.lean",
+      "Paper2/SourceFaithful/SourceStatements/MatchingCommonEdge.lean",
+      "Paper2/SourceFaithful/SourceStatements/CommonEdgeFactors.lean"
+    ],
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "5.16",
+    "kind": "proposition",
+    "title": "Phase-independent matching and common factors",
+    "labels": [
+      "prop:odd-dih-support-circuit-rigidity"
+    ],
+    "source_line": 3903,
+    "referenced_labels": [
+      "eq:odd-dih-kernels"
+    ],
+    "lean_declarations": [
+      "Paper2.SourceFaithful.SourceStatements.DihedralRuling.source_5_16"
+    ],
+    "mapping_kind": "stronger_first_deck_source_statement",
+    "lean_files": [
+      "Paper2/SourceFaithful/SourceStatements/DihedralRulingStatement.lean"
+    ],
+    "mapping_note": "For arbitrary original port order and xor, the literal signed first deck of the Walsh tensor suffices to derive a fixed nonsingular binary product on disjoint pairs and one fixed varying pair, with equality of actual tables for every scalar phase. Zero members and proportional pencils are included. All matching agreement and three-phase common-factor ruling are proved internally; the source stronger successive-contraction closure and oddness assumptions are not needed.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "5.17",
+    "kind": "lemma",
+    "title": "A binary factor from contractions",
+    "labels": [
+      "lem:odd-dih-common-binary-factor"
+    ],
+    "source_line": 3941,
+    "referenced_labels": [
+      "prop:odd-dih-support-circuit-rigidity"
+    ],
+    "lean_declarations": [
+      "Paper2.SourceFaithful.SourceStatements.DihedralRuling.source_5_17"
+    ],
+    "mapping_kind": "stronger_first_deck_source_statement",
+    "lean_files": [
+      "Paper2/SourceFaithful/SourceStatements/DihedralRulingStatement.lean"
+    ],
+    "mapping_note": "For arbitrary nonzero original arity at least eight, the same literal signed first deck of its Walsh tensor suffices for a proper factorization of the original tensor into two positive-arity factors, through an actual port equivalence and inverse Walsh transport. No stage, minimum-prime, binary-safety, factor-availability or provider hypothesis occurs. This is stronger than the source successive-contraction hypothesis.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "5.18",
+    "kind": "theorem",
+    "title": "The odd-cyclic case",
+    "labels": [
+      "thm:odd-cyclic"
+    ],
+    "source_line": 4052,
+    "referenced_labels": [
+      "lem:normalization-ledger",
+      "def:height-one-outer-successor"
+    ],
+    "lean_declarations": [
+      "Paper2.PublicDichotomy.native_dichotomy",
+      "Paper2.SourceFaithful.HeightOne.StableNormalizedStage.cyclic_terminal"
+    ],
+    "mapping_kind": "stronger_unconditional_public_conclusion",
+    "lean_files": [
+      "Paper2/PublicDichotomyComplete.lean",
+      "Paper2/SourceFaithful/HeightOneStableAnalytic.lean"
+    ],
+    "mapping_note": "The stronger unconditional PublicDichotomy.native_dichotomy proves the source's first permitted outcome for the current finite algebraic language: native-X hardness or Tract of its K-image. This proves the entire source disjunction without its cyclic normalized-stage premises. The stable cyclic terminal remains a secondary constructive component; this mapping does not independently expose the specified arbitrary GO(X) strict-successor or same-coordinate saturated-family alternatives.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "5.19",
+    "kind": "lemma",
+    "title": "Phase-independent matching",
+    "labels": [
+      "lem:odd-cyc-one-matching"
+    ],
+    "source_line": 4148,
+    "referenced_labels": [
+      "cond:height-one-contractions",
+      "eq:odd-cyc-card-pencil",
+      "eq:odd-cyc-matching-code"
+    ],
+    "lean_declarations": [
+      "Paper2.SourceFaithful.SourceStatements.CyclicCardFactorBridge.root_card_data",
+      "Paper2.HeightOne.Cyclic.phase_independent_matching",
+      "Paper2.HeightOne.Cyclic.common_matching_projection",
+      "Paper2.HeightOne.Cyclic.minimum_walsh_matching_core"
+    ],
+    "mapping_kind": "source_components_with_original_contraction_factor_premise_discharge",
+    "lean_files": [
+      "Paper2/SourceFaithful/SourceStatements/CyclicCardFactorBridge.lean",
+      "Paper2/HeightOne/Cyclic/MatchingSupport.lean",
+      "Paper2/HeightOne/Cyclic/MatchingDeck.lean",
+      "Paper2/HeightOne/Cyclic/MatchingCore.lean"
+    ],
+    "mapping_note": "The source original native cyclic contraction-prime-factor condition is recorded by CyclicCardFactors. root_card_data derives exact EqualityMatchingSupport and Product coefficients for each root phase from a genuine positive-arity prime decomposition, retaining the original surviving port order and nonzero 2*representative-scale Walsh identity. Thus matching support is derived rather than supplied by the source caller. phase_independent_matching proves the zero-pencil alternative or one common perfect matching and at most one zero phase, including N=3; common_matching_projection proves the actual A-sB coefficient/reindex identification and common residual projection. The minimum-stage declaration is a secondary application. No processed-language, whole-family evenness or caller analytic-matching premise is needed for this original-premise component chain.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "5.20",
+    "kind": "lemma",
+    "title": "Every port pair has a nonzero phase contraction above arity four",
+    "labels": [
+      "lem:odd-cyc-zero-graph-empty"
+    ],
+    "source_line": 4213,
+    "referenced_labels": [
+      "lem:odd-cyc-one-matching"
+    ],
+    "lean_declarations": [
+      "Paper2.SourceFaithful.SourceStatements.CyclicCardFactorBridge.root_card_data",
+      "Paper2.HeightOne.Cyclic.EqualityMatchingSupport.origin",
+      "Paper2.HeightOne.Cyclic.every_pair_visible_of_origin_cards"
+    ],
+    "mapping_kind": "stronger_pair_visibility_with_original_contraction_factor_bridge",
+    "lean_files": [
+      "Paper2/SourceFaithful/SourceStatements/CyclicCardFactorBridge.lean",
+      "Paper2/HeightOne/Cyclic/ActualDeck.lean",
+      "Paper2/HeightOne/Cyclic/ZeroPairs.lean"
+    ],
+    "mapping_note": "The original native CyclicCardFactors condition yields actual equality-matching support for each root phase through root_card_data. EqualityMatchingSupport.origin then proves its literal all-zero residual coefficient is nonzero, discharging every origin-card input to every_pair_visible_of_origin_cards. That generic theorem gives a nonzero phase contraction at every original port pair already from five ports, so covers the source n >= 6 conclusion with weaker arity assumptions. Two distinct nonzero root phases are supplied by N >= 3. No caller origin coefficient, assumed matching support, whole-family evenness or processed-stage premise is added to the source component chain.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "5.21",
+    "kind": "lemma",
+    "title": "Rank-one diagonal restrictions",
+    "labels": [
+      "lem:diagonal-slice-integration",
+      "eq:diagonal-slice-q3-table"
+    ],
+    "source_line": 4268,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.HeightOne.PhaseCards.provedDiagonalSlices"
+    ],
+    "mapping_kind": "proved_source_provider",
+    "lean_files": [
+      "Paper2/HeightOne/PhaseCards/Paper1Diagonal.lean"
+    ],
+    "mapping_note": "Both large-arity diagonal integration and the exceptional three-port clause are supplied by bundled proved Paper1 algebra, not a fresh accepted proposition.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "5.22",
+    "kind": "theorem",
+    "title": "The minimum nonbinary arity is four in the cyclic case",
+    "labels": [
+      "thm:odd-cyc-higher-collapse"
+    ],
+    "source_line": 4291,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.SourceFaithful.SourceStatements.CyclicMinimumStatement.source_5_22",
+      "Paper2.SourceFaithful.SourceStatements.CyclicMinimumStatement.higher_binary_decomposition",
+      "Paper2.HeightOne.Cyclic.minimum_cyclic_prime_arity_four"
+    ],
+    "mapping_kind": "stronger_original_signature_contraction_factor_statement",
+    "lean_files": [
+      "Paper2/SourceFaithful/SourceStatements/CyclicMinimumStatement.lean",
+      "Paper2/SourceFaithful/SourceStatements/CyclicCardFactorBridge.lean",
+      "Paper2/HeightOne/Cyclic/HigherCollapse.lean"
+    ],
+    "mapping_note": "The exact compiled local endpoint takes N >= 3 odd, actual fixed cyclic representatives, the original even-arity nonbinary tensor-prime signature, and the source condition on actual ordered-port native contraction prime factors in both kernel orientations. CyclicCardFactors records nonzero contractions with actual ordered prime decompositions, whose positive-arity factors are nonsingular binaries with literal cyclic Walsh-transfer membership. It derives every matching-support and Product-coefficient hypothesis and proves n = 4. The surrounding finite factor-closed language, least-arity context, whole-language evenness, all-binaries safety, processed-stage and Paper1 callbacks are not needed by this stronger local result. The stable-stage endpoint is retained as an application component.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "5.23",
+    "kind": "lemma",
+    "title": "Attaching cyclic binary representatives to four ports",
+    "labels": [
+      "lem:odd-cyc-four-port-dressing",
+      "eq:cyclic-dressing-image"
+    ],
+    "source_line": 4417,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.SourceFaithful.SourceStatements.CyclicDressing.source_5_23",
+      "Paper2.SourceFaithful.SourceStatements.CyclicDressing.source_5_23_image",
+      "Paper2.SourceFaithful.SourceStatements.CyclicDressing.source_5_23_odd",
+      "Paper2.HeightOne.Cyclic.actual_four_port_dressing"
+    ],
+    "mapping_kind": "direct_source_statement",
+    "lean_files": [
+      "Paper2/SourceFaithful/SourceStatements/CyclicDressingStatement.lean",
+      "Paper2/HeightOne/Cyclic/ActualDressing.lean"
+    ],
+    "mapping_note": "The exact source endpoint takes the literal supplied quaternary and specified actual ordered binary representatives with Walsh matrix kappa_s D_s Z and kappa_s nonzero. It constructs the native attachment network and proves the normalized coefficient identity after division by the explicit nonzero scalar 2^4 times the product of the four kappa values. At every order it proves the exact image iff R = v1*v2*v3/u is a square in mu_N, and at odd order proves bijectivity. No accepted-group, all-binaries-safe, arbitrary replacement representative, or odd-only hypothesis is supplied for the general image and construction clauses. The older actual dressing result is retained as a secondary component.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "5.24",
+    "kind": "theorem",
+    "title": "The quaternary odd-cyclic case",
+    "labels": [
+      "thm:odd-cyc-quaternary-closure"
+    ],
+    "source_line": 4458,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.PublicDichotomy.native_dichotomy",
+      "Paper2.HeightOne.Cyclic.actual_prime_quaternary_eightVertex",
+      "Paper2.SourceFaithful.HeightOne.StableNormalizedStage.cyclic_terminal"
+    ],
+    "mapping_kind": "stronger_unconditional_public_conclusion",
+    "lean_files": [
+      "Paper2/PublicDichotomyComplete.lean",
+      "Paper2/HeightOne/Cyclic/QuaternaryClosure.lean",
+      "Paper2/SourceFaithful/HeightOneStableAnalytic.lean"
+    ],
+    "mapping_note": "The stronger unconditional PublicDichotomy.native_dichotomy proves Tract(kImage L) or actual strict-public native-X #P-hardness for every original finite algebraic Language. This is the first allowed outcome of the source theorem, so it covers the full source disjunction for arbitrary nonzero quaternary q, including nonprime q, without additional factor-closure, cyclic-group, mountain, safety or contraction premises. It does not claim an independent proof of the source second proper-factor-reduction branch. The retained actual_prime_quaternary_eightVertex and StableNormalizedStage.cyclic_terminal declarations are narrower prime/stable-stage components used internally in the height-one route; neither alone is reported as an arbitrary-q source interface.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "5.25",
+    "kind": "theorem",
+    "title": "Hardness, tractability, or a strict update",
+    "labels": [
+      "thm:height-one-transfer-interface"
+    ],
+    "source_line": 4659,
+    "referenced_labels": [
+      "lem:normalization-ledger",
+      "def:height-one-outer-successor"
+    ],
+    "lean_declarations": [
+      "Paper2.PublicDichotomy.native_dichotomy",
+      "Paper2.SourceFaithful.HeightOne.raw_stage_step",
+      "Paper2.SourceFaithful.HeightOne.iteration_reaches_stable"
+    ],
+    "mapping_kind": "stronger_unconditional_public_conclusion",
+    "lean_files": [
+      "Paper2/PublicDichotomyComplete.lean",
+      "Paper2/SourceFaithful/HeightOneIteration.lean"
+    ],
+    "mapping_note": "The stronger unconditional PublicDichotomy.native_dichotomy proves the source's first permitted current-language outcome, native-X hardness or Tract of its K-image, for every finite algebraic language. It therefore proves the printed terminal-or-strict-update disjunction. The actual raw-stage step and finite iteration remain secondary components of the completed height-one proof; this mapping does not claim an independent standalone arbitrary GO(X) strict-successor record with all of the source's transported-stage fields.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "6.1",
+    "kind": "theorem",
+    "title": "Dichotomy with a height-two mountain",
+    "labels": [
+      "cor:height-two-complete"
+    ],
+    "source_line": 4780,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.SourceFaithful.HeightTwo.mountain_classification"
+    ],
+    "mapping_kind": "proved_source_theorem_with_instantiated_providers",
+    "lean_files": [
+      "Paper2/SourceFaithful/HeightTwo.lean"
+    ],
+    "mapping_note": "The original whole-language result includes zero/nullary labels and uses actual proved classification/factor/normalization providers in the public mountain assembly.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "7.1",
+    "kind": "theorem",
+    "title": "Height-three mountain dichotomy",
+    "labels": [
+      "thm:height-three-complete"
+    ],
+    "source_line": 4801,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.SourceFaithful.HeightThree.theorem_7_1"
+    ],
+    "mapping_kind": "proved_source_theorem_with_instantiated_providers",
+    "lean_files": [
+      "Paper2/SourceFaithful/HeightThree/Complete.lean"
+    ],
+    "mapping_note": "The exact finite Q6 coverage and geometric naturality are proved; the actual nonmatching quaternary terminal closes the whole original language.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "7.2",
+    "kind": "lemma",
+    "title": "A matching-product central layer yields a hard quaternary",
+    "labels": [
+      "lem:hc-transversal-cube-terminal"
+    ],
+    "source_line": 4850,
+    "referenced_labels": [
+      "thm:external-eo"
+    ],
+    "lean_declarations": [
+      "Paper2.TransversalCube.exists_native_gadget_WT18a",
+      "Paper2.TransversalCube.matching_mountain_hard",
+      "Paper2.TransversalCube.matching_mountain_terminal",
+      "Paper2.SourceFaithful.TransversalCube.matching_mountain_hard"
+    ],
+    "mapping_kind": "direct_source_network_theorem_with_instantiated_providers",
+    "mapping_note": "The actual arbitrary ordered matching-product mountain produces a native-X network using exactly two source vertices and the displayed internal-edge count, literal WT.18a six nonzero EO entries and their required structural/sign obstruction. The actual language member and finite graph imply strict original-language hardness using proved direct-gadget, restriction and EO source providers. The SourceFaithful matching_mountain_hard endpoint supplies the actual canonical fixed-field answer convention used by the completed public proof.",
+    "lean_files": [
+      "Paper2/TransversalCube.lean",
+      "Paper2/TransversalCube/Complete.lean",
+      "Paper2/SourceFaithful/TransversalCube.lean"
+    ],
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "7.3",
+    "kind": "definition",
+    "title": "Loop and two-copy contractions of a six-port mountain",
+    "labels": [
+      "def:hc-q6-joint-deck",
+      "eq:hc-q6-loop-deck",
+      "eq:hc-q6-two-copy-deck"
+    ],
+    "source_line": 4940,
+    "referenced_labels": [
+      "eq:hc-q6-two-copy-deck"
+    ],
+    "lean_declarations": [
+      "Paper2.HeightThree.loopSignature_array",
+      "Paper2.HeightThree.cardNetwork_array"
+    ],
+    "mapping_kind": "direct_source_definition_and_graph_equalities",
+    "mapping_note": "The displayed loop and two-copy coefficient arrays are the literal denotations of actual native-X graphs, including ordered relabeling and all coefficients, rather than finite-search summaries.",
+    "lean_files": [
+      "Paper2/HeightThree/LoopGeometry.lean",
+      "Paper2/HeightThree/CardArray.lean"
+    ],
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "7.4",
+    "kind": "lemma",
+    "title": "Support forced by six-port contractions",
+    "labels": [
+      "lem:hc-q6-joint-rigidity"
+    ],
+    "source_line": 4994,
+    "referenced_labels": [
+      "def:hc-q6-joint-deck"
+    ],
+    "lean_declarations": [
+      "Paper2.Certificates.Q6.joint_deck_support"
+    ],
+    "mapping_kind": "proved_source_coefficient_rigidity",
+    "lean_files": [
+      "Paper2/Certificates/Q6JointDeck.lean"
+    ],
+    "mapping_note": "The complete actual loop/two-copy arrays imply one complementary pair, using exhaustive branch coverage, all 24 row proofs and orbit naturality.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "7.5",
+    "kind": "theorem",
+    "title": "A non-matching quaternary output from a six-port mountain",
+    "labels": [
+      "thm:hc-q6-complete"
+    ],
+    "source_line": 5018,
+    "referenced_labels": [
+      "def:hc-q6-joint-deck",
+      "lem:hc-transversal-cube-terminal"
+    ],
+    "lean_declarations": [
+      "Paper2.HeightThree.nonmatching_mountain"
+    ],
+    "mapping_kind": "proved_unconditional_graph_obstruction",
+    "lean_files": [
+      "Paper2/HeightThree/NonMatching.lean"
+    ],
+    "mapping_note": "The actual graph theorem instantiates its rigidity hypothesis with the complete Q6 joint-deck proof. No Q6 coverage parameter remains.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "8.1",
+    "kind": "theorem",
+    "title": "Mountain dichotomy at every height at least four",
+    "labels": [
+      "thm:height-at-least-four"
+    ],
+    "source_line": 5083,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.SourceFaithful.HighHeight.classification_ge_four",
+      "Paper2.SourceFaithful.Synthesis.mountain_classification"
+    ],
+    "mapping_kind": "proved_source_theorem_with_instantiated_providers",
+    "lean_files": [
+      "Paper2/SourceFaithful/HighHeightCompleteTerminal.lean",
+      "Paper2/SourceFaithful/Synthesis/MountainInterface.lean"
+    ],
+    "mapping_note": "The zero-central generalized equality branch and nonzero-central finite normalization/height-four atlas/arbitrary-height reconstruction branches are all proved; providers are instantiated in the public mountain theorem. The original-language mountain_classification wrapper performs preprocessing internally, retains the actual mountain, and instantiates every provider; classification_ge_four is its internal preprocessed high-height branch.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "8.2",
+    "kind": "remark",
+    "title": "Relation to the real-valued Holant argument",
+    "labels": [
+      "rem:sc20-high-height"
+    ],
+    "source_line": 5109,
+    "referenced_labels": [
+      "thm:hc-relative-eo-terminal",
+      "lem:hc-port-normalization",
+      "lem:hc-global-phase",
+      "lem:sc-x-product-reconstruction"
+    ],
+    "lean_declarations": [],
+    "mapping_kind": "expository",
+    "mapping_note": "This numbered environment is explanatory prose and is not counted as an independently proved Lean proposition.",
+    "source": "manuscript/paper.tex",
+    "scope": "expository"
+  },
+  {
+    "number": "8.3",
+    "kind": "lemma",
+    "title": "Vanishing pair contractions",
+    "labels": [
+      "lem:wt-zero-loop"
+    ],
+    "source_line": 5178,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.CommonPhase.vanishing_pair_contractions_weight",
+      "Paper2.CommonPhase.eo_zero_of_vanishing_pair_contractions"
+    ],
+    "mapping_kind": "direct_source_theorem",
+    "mapping_note": "For any finite port type of cardinality at least three, every actual pair contraction vanishing forces all non-extreme weight coefficients to vanish. The characteristic-zero/no-zero-divisor generalization includes complex signatures, and the separate EO consequence proves the whole signature zero.",
+    "lean_files": [
+      "Paper2/CommonPhase/ZeroLoops.lean"
+    ],
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "8.4",
+    "kind": "lemma",
+    "title": "Propagation of \\(X\\)-matching products",
+    "labels": [
+      "lem:hc-x-line-propagation"
+    ],
+    "source_line": 5191,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.MatchingPropagation.x_line_propagation_source",
+      "Paper2.MatchingPropagation.x_line_matching_deck"
+    ],
+    "mapping_kind": "direct_source_theorem",
+    "mapping_note": "x_line_propagation_source accepts the exact EO/even original tensor domain, cardinality at least eight, the full ARS deck with zero contractions permitted and either printed propagation condition. It derives a literal nonsingular X-matching product at every original pair; the matching-deck wrapper selects precisely those proved matchings and nonzero scales.",
+    "lean_files": [
+      "Paper2/MatchingPropagation.lean"
+    ],
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "8.5",
+    "kind": "lemma",
+    "title": "Relative port normalization at every arity at least eight",
+    "labels": [
+      "lem:hc-port-normalization",
+      "eq:hc-normalized-deck"
+    ],
+    "source_line": 5272,
+    "referenced_labels": [
+      "thm:height-at-least-four"
+    ],
+    "lean_declarations": [
+      "Paper2.SourceFaithful.HighHeight.finite_port_normalization",
+      "Paper2.SourceFaithful.HighHeight.retained_small_boundary_isARSProduct"
+    ],
+    "mapping_kind": "proved_normalization_and_discharged_terminal_components",
+    "lean_files": [
+      "Paper2/SourceFaithful/HighHeightCompleteNormalization.lean",
+      "Paper2/SourceFaithful/HighHeightCompleteTerminal.lean"
+    ],
+    "mapping_note": "The finite normalization constructs actual retained stages and a normalized deck. The actual relative EO terminal discharges its smaller-boundary premise in the nonhard branch; no central tensor is silently adjoined.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "8.6",
+    "kind": "lemma",
+    "title": "A common phase for EO contractions",
+    "labels": [
+      "lem:hc-global-phase"
+    ],
+    "source_line": 5350,
+    "referenced_labels": [
+      "eq:hc-normalized-deck"
+    ],
+    "lean_declarations": [
+      "Paper2.CommonPhase.common_phase_algebraic",
+      "Paper2.CommonPhase.common_phase_algebraic_input"
+    ],
+    "mapping_kind": "stronger_direct_source_theorem",
+    "mapping_note": "common_phase_algebraic_input proves the complete source conclusion from an algebraic original EO tensor and its actual nonzero complex-scaled literal matching deck. The algebraicity of the normalizing scalar is derived from an actual contraction coefficient, without a separate algebraicity premise on displayed deck scales. It produces real coefficients, complement invariance, positive real normalized deck scales and exact ARS, and does not assert the algebraic normalization is a realizable gadget.",
+    "lean_files": [
+      "Paper2/CommonPhase.lean"
+    ],
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "8.7",
+    "kind": "lemma",
+    "title": "Shao--Cai matching-product reconstruction\n\t\t{\\cite[full version, Lemma~2.11]{ShaoCai2020}}",
+    "labels": [
+      "lem:sc-x-product-reconstruction"
+    ],
+    "source_line": 5392,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.HighHeightReconstruction.reconstruct_ge_ten",
+      "Paper2.HighHeightReconstruction.reconstruct_of_shared_overlap",
+      "Paper2.HighHeightReconstruction.shao_cai_ge_ten_source",
+      "Paper2.HighHeightReconstruction.shao_cai_eight_source"
+    ],
+    "mapping_kind": "direct_source_theorem_and_stronger_algebraic_proof",
+    "mapping_note": "shao_cai_ge_ten_source and shao_cai_eight_source retain the printed EO, exact ARS and nonzero real deck coefficients. The former reconstructs the full X matching product; the latter also preserves the literal shared-edge X factor formula. Their stronger internal complex-scalar proofs eliminate the need for an externally accepted Shao-Cai theorem.",
+    "lean_files": [
+      "Paper2/HighHeightReconstruction/Source.lean"
+    ],
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "8.8",
+    "kind": "lemma",
+    "title": "A shared edge forces a matching product",
+    "labels": [
+      "lem:q8-scope-collision"
+    ],
+    "source_line": 5456,
+    "referenced_labels": [
+      "eq:hc-normalized-deck"
+    ],
+    "lean_declarations": [
+      "Paper2.Certificates.Q8.Atlas.matching_deck_of_collision",
+      "Paper2.SourceFaithful.TransversalCube.matching_mountain_hard"
+    ],
+    "mapping_kind": "proved_source_shared_edge_reconstruction",
+    "lean_files": [
+      "Paper2/Certificates/Q8AlgebraicReconstruction.lean",
+      "Paper2/SourceFaithful/TransversalCube.lean"
+    ],
+    "mapping_note": "A collision of actual residual matching edges yields a common deck, then the independently proved matching-product reconstruction. The actual source-faithful matching_mountain_hard component supplies the ambient native hardness consequent after reconstruction, with the proved public providers.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "8.9",
+    "kind": "lemma",
+    "title": "Translation form of the matching family",
+    "labels": [
+      "lem:q8-collision-free-atlas"
+    ],
+    "source_line": 5477,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.Certificates.Q8.Atlas.collision_free_translation",
+      "Paper2.Certificates.Q8.Atlas.matchingDeck_compatible"
+    ],
+    "mapping_kind": "proved_source_translation_components",
+    "lean_files": [
+      "Paper2/Certificates/Q8AtlasUnnormalized.lean",
+      "Paper2/Certificates/Q8DeckCompatibility.lean"
+    ],
+    "mapping_note": "Arbitrary residual matchings are normalized/relabelled with proved splice naturality; genuine tensor contractions supply double-splice compatibility.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "8.10",
+    "kind": "lemma",
+    "title": "The matching family determines the central $RM(1,3)$ coefficients",
+    "labels": [
+      "lem:q8-canonical-support"
+    ],
+    "source_line": 5520,
+    "referenced_labels": [
+      "lem:q8-collision-free-atlas"
+    ],
+    "lean_declarations": [
+      "Paper2.Certificates.Q8.Atlas.collision_free_deck_reedMuller_algebraic",
+      "Paper2.Certificates.Q8.Atlas.scalar_central_of_labeled_deck"
+    ],
+    "mapping_kind": "proved_actual_tensor_deck_reconstruction",
+    "lean_files": [
+      "Paper2/Certificates/Q8AlgebraicReconstruction.lean",
+      "Paper2/Certificates/Q8LabeledDeck.lean"
+    ],
+    "mapping_note": "The actual coefficient and residual-matching deck is identified with a nonzero scalar multiple of the central Reed-Muller signature after the proved labeling. The earlier coefficient-system-only boundary is closed.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "8.11",
+    "kind": "lemma",
+    "title": "Normalizing the endpoint coefficients of \\(\\RMcore\\)",
+    "labels": [
+      "lem:q8-canonical-endpoint-repair",
+      "eq:q8-canonical-endpoint",
+      "eq:q8-canonical-normalization"
+    ],
+    "source_line": 5602,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.ReedMullerNormalization.canonical_endpoint_repair",
+      "Paper2.ReedMullerNormalization.repairNetwork_denote",
+      "Paper2.SourceFaithful.HeightFour.canonical_normalization"
+    ],
+    "mapping_kind": "direct_source_statement_and_actual_network_components",
+    "lean_files": [
+      "Paper2/ReedMullerNormalization/Endpoint.lean",
+      "Paper2/ReedMullerNormalization/Network.lean",
+      "Paper2/SourceFaithful/HeightFour/Diagonal.lean"
+    ],
+    "mapping_note": "canonical_endpoint_repair directly proves both source alternatives: the actual two-source, five-native-X-edge six-port output is nonzero, central-supported and not a weighted matching product, or A*B=c^2 and EVERY algebraic s with s^8=c/A gives the literal diagonal normalization and preserves the native X edge exactly. The network evaluation and legal global normalization components are also listed; the original-language wrapper instantiates the actual providers.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "8.12",
+    "kind": "lemma",
+    "title": "The Reed--Muller Bell reduction under high charge",
+    "labels": [
+      "thm:q8-normalized-bell-lift",
+      "eq:q8-relative-bell-reduction"
+    ],
+    "source_line": 5685,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.SourceFaithful.BellTerminal.bell_reduction",
+      "Paper2.SourceFaithful.BellTerminal.rm8_hard"
+    ],
+    "mapping_kind": "proved_source_bell_reduction",
+    "lean_files": [
+      "Paper2/SourceFaithful/BellTerminal.lean"
+    ],
+    "mapping_note": "The original-language extension uses actual zero/one/two Bell occurrence query graphs, scalar correction and finite polynomial oracle machines. Public strict-root conversion is proved separately and used by the final interface.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "9.1",
+    "kind": "theorem",
+    "title": "Dichotomy for sets containing a mountain",
+    "labels": [
+      "thm:mountain-interface"
+    ],
+    "source_line": 5854,
+    "referenced_labels": [
+      "lem:charge-bridge"
+    ],
+    "lean_declarations": [
+      "Paper2.SourceFaithful.Synthesis.theorem_9_1_public"
+    ],
+    "mapping_kind": "unconditional_public_source_theorem",
+    "lean_files": [
+      "Paper2/SourceFaithful/Synthesis/PublicMountainInterface.lean"
+    ],
+    "mapping_note": "The source even-arity and high-height half-charge divisibility premises remain, exactly as in the source; no unary/provider/classifier/compiler input remains. The conclusion concerns strict public native-X answers on the original language.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "9.2",
+    "kind": "theorem",
+    "title": "Structural classification in \\(K\\)-coordinates",
+    "labels": [
+      "thm:K-structural"
+    ],
+    "source_line": 5886,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.PublicDichotomy.theorem_9_2"
+    ],
+    "mapping_kind": "unconditional_public_source_theorem_with_recognition",
+    "lean_files": [
+      "Paper2/PublicNativeClassification.lean"
+    ],
+    "mapping_note": "One actual terminating native recognizer precedes all valid original root-coded languages; every such language has strict public native FP or actual controlled #P-hardness by its K-image criterion.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "A.1",
+    "kind": "proposition",
+    "title": "Order-three odd-dihedral six-port classification",
+    "labels": [
+      "prop:cert-odd-dih-q6-order-three"
+    ],
+    "source_line": 6102,
+    "referenced_labels": [
+      "eq:cert-odd-dih-q6-card"
+    ],
+    "lean_declarations": [
+      "Paper2.SourceFaithful.SourceStatements.OddDihedralSixPort.source_A_1",
+      "Paper2.Certificates.DihedralSupport.AtlasGeometrySemantic.source_A_1_i",
+      "Paper2.SourceFaithful.SourceStatements.OddDihedralPencilExclusion.source_A_1_ii_literal_complex",
+      "Paper2.SourceFaithful.SourceStatements.OddDihedralSupport.source_A_1_iii"
+    ],
+    "mapping_kind": "direct_source_statement",
+    "lean_files": [
+      "Paper2/SourceFaithful/SourceStatements/OddDihedralSixPortStatement.lean",
+      "Paper2/Certificates/DihedralSupport/AtlasGeometrySemanticStatement.lean",
+      "Paper2/SourceFaithful/SourceStatements/OddDihedralCanonicalContractions.lean",
+      "Paper2/SourceFaithful/SourceStatements/OddDihedralSupportStatement.lean"
+    ],
+    "mapping_note": "The exact three-clause source proposition is compiled in SourceA1Packet omega under only the literal complex root condition omega²+omega+1=0. Part (i) counts actual complex projective points (66), actual exhaustive rich lines (202), exactly three points per rich line, the four categories (4/36/54/108), and all actual admissible labelled-pencil common-scalar classes (1212), in both parities. Full actual span vectors on each ruling carry fixed Segre factors. Part (ii) has an arbitrary complex six-port tensor, actual fixed Hamming parity and only the source fifteen increasing-order port pairs; exact coefficient transport derives the stronger ordered-deck interface internally. It excludes every phase-labelled secant/triangle pencil and derives the one-block/fixed-Segre consequence for every genuinely nonconstant pencil, including GE4 two-word cards. Part (iii) exhaustively classifies arbitrary actual Boolean supports by the literal port/xor projection condition, with actual F₂ submodule cosets of arbitrary even partitions, the actual full signed-permutation orbit of the displayed Sstar, and empty support; cardinalities 873/392/480 and source partition types (6)/(4+2)/(2+2+2) at 32/240/120 count distinct supports. Disjointness and nonempty parity are proved. All finite certificate rows are kernel checked and joined to arbitrary-input mathematical coverage; no script-success flag, finite-field-only tensor restriction or caller-supplied classification is assumed.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "A.2",
+    "kind": "remark",
+    "title": "Scope of the odd-dihedral certificate",
+    "labels": [
+      "rem:cert-odd-dih-q6-scope"
+    ],
+    "source_line": 6309,
+    "referenced_labels": [
+      "prop:cert-odd-dih-q6-order-three",
+      "eq:odd-dih-kernels",
+      "eq:cert-odd-dih-q6-card"
+    ],
+    "lean_declarations": [],
+    "mapping_kind": "expository",
+    "mapping_note": "This numbered environment is explanatory prose and is not counted as an independently proved Lean proposition.",
+    "source": "manuscript/paper.tex",
+    "scope": "expository"
+  },
+  {
+    "number": "A.3",
+    "kind": "theorem",
+    "title": "Six-port support classification",
+    "labels": [
+      "thm:cert-odd-dih-q6-interface"
+    ],
+    "source_line": 6322,
+    "referenced_labels": [
+      "eq:odd-dih-q6-nonproduct-support"
+    ],
+    "lean_declarations": [
+      "Paper2.HeightOne.Dihedral.SixPortPencils.three_phase_union_card_le_four",
+      "Paper2.HeightOne.Dihedral.joint_support_complement_closed",
+      "Paper2.SourceFaithful.SourceStatements.OddDihedralSupport.support_classification",
+      "Paper2.SourceFaithful.SourceStatements.OddDihedralSupport.source_A_1_iii"
+    ],
+    "mapping_kind": "source_support_components_at_the_original_hypotheses",
+    "lean_files": [
+      "Paper2/HeightOne/Dihedral/SixPortPencils.lean",
+      "Paper2/HeightOne/Dihedral/PencilCounting.lean",
+      "Paper2/SourceFaithful/SourceStatements/OddDihedralSupportStatement.lean"
+    ],
+    "mapping_note": "Part (i) follows from the generic three-phase union bound and exact complement-closure transport for all actual ordered pair/xor pencils: a source binary phase product has at most four support points and is complement-closed. Zero and projectively constant pencils are retained. Part (ii) is covered at its weaker support-only premise by the literal admissible-support classifier, whose projection predicate is exactly the source empty-or-at-most-two-complement-pairs condition. It gives the empty support, actual arbitrary even-partition F2 cosets of types (6), (4+2), (2+2+2), and the full signed-permutation S_star orbit. This component correspondence does not infer coefficient factorization from support shape and does not claim the older six_binary_decomposition_of_all_xor_cards, with stronger coefficient/card hypotheses, alone covers part (ii).",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "A.4",
+    "kind": "proposition",
+    "title": "High-charge six-port coefficient classification",
+    "labels": [
+      "prop:cert-high-charge-q6-joint-deck",
+      "eq:cert-q6-zero-pairs",
+      "eq:cert-q6-pair-products"
+    ],
+    "source_line": 6409,
+    "referenced_labels": [
+      "eq:cert-q6-loop-array",
+      "eq:cert-q6-two-copy-array"
+    ],
+    "lean_declarations": [
+      "Paper2.Certificates.Q6.joint_deck_support"
+    ],
+    "mapping_kind": "proved_full_coefficient_classification",
+    "lean_files": [
+      "Paper2/Certificates/Q6JointDeck.lean"
+    ],
+    "mapping_note": "Exhaustive signed-branch coverage, sparse and dense algebra and full orbit naturality are all proved for the literal subset-sum arrays. No Python/Z3 accepted-case list is trusted.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "A.5",
+    "kind": "remark",
+    "title": "Scope of the six-port certificate",
+    "labels": [
+      "rem:cert-high-charge-q6-scope"
+    ],
+    "source_line": 6503,
+    "referenced_labels": [
+      "prop:cert-high-charge-q6-joint-deck",
+      "eq:cert-q6-loop-array",
+      "eq:cert-q6-two-copy-array",
+      "eq:cert-q6-two-copy-array",
+      "subsec:hc-q6-base",
+      "thm:hc-q6-complete"
+    ],
+    "lean_declarations": [],
+    "mapping_kind": "expository",
+    "mapping_note": "This numbered environment is explanatory prose and is not counted as an independently proved Lean proposition.",
+    "source": "manuscript/paper.tex",
+    "scope": "expository"
+  },
+  {
+    "number": "A.6",
+    "kind": "theorem",
+    "title": "Consequence for loop and two-copy arrays",
+    "labels": [
+      "thm:cert-high-charge-q6-interface"
+    ],
+    "source_line": 6513,
+    "referenced_labels": [
+      "eq:cert-q6-loop-array",
+      "eq:cert-q6-two-copy-array"
+    ],
+    "lean_declarations": [
+      "Paper2.Certificates.Q6.joint_deck_support",
+      "Paper2.HeightThree.nonmatching_mountain"
+    ],
+    "mapping_kind": "proved_source_arrays_and_graph_correspondence",
+    "lean_files": [
+      "Paper2/Certificates/Q6JointDeck.lean",
+      "Paper2/HeightThree/NonMatching.lean"
+    ],
+    "mapping_note": "The actual arrays theorem is connected to loop/two-copy native graphs by HeightThree; its conclusion is used in the unconditional nonmatching mountain theorem.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "A.7",
+    "kind": "remark",
+    "title": "Why the two-copy six-port arrays are necessary",
+    "labels": [
+      "rem:cert-high-charge-q6-one-loop-insufficient"
+    ],
+    "source_line": 6533,
+    "referenced_labels": [
+      "eq:cert-q6-loop-array",
+      "eq:cert-q6-two-copy-array",
+      "thm:cert-high-charge-q6-interface"
+    ],
+    "lean_declarations": [],
+    "mapping_kind": "expository",
+    "mapping_note": "This numbered environment is explanatory prose and is not counted as an independently proved Lean proposition.",
+    "source": "manuscript/paper.tex",
+    "scope": "expository"
+  },
+  {
+    "number": "A.8",
+    "kind": "proposition",
+    "title": "Eight-port matching classification",
+    "labels": [
+      "prop:cert-q8-collision-free-atlas",
+      "eq:cert-q8-commuting-cards",
+      "eq:cert-q8-translation-atlas"
+    ],
+    "source_line": 6566,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.Certificates.Q8.Atlas.normalizedAtlasEquiv",
+      "Paper2.Certificates.Q8.Atlas.actual_normalized_atlas_cover"
+    ],
+    "mapping_kind": "proved_complete_normalized_finite_atlas",
+    "lean_files": [
+      "Paper2/Certificates/Q8AtlasClassification.lean",
+      "Paper2/Certificates/Q8Atlas.lean"
+    ],
+    "mapping_note": "All fifteen choices at every search node have a checked successor or explicit incompatibility. The nine atlas rows, seven global ancestors and two translation rows are classified with complete coverage.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "A.9",
+    "kind": "theorem",
+    "title": "Translation form of the matching family",
+    "labels": [
+      "thm:cert-q8-collision-free-interface"
+    ],
+    "source_line": 6627,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.Certificates.Q8.Atlas.collision_free_translation"
+    ],
+    "mapping_kind": "proved_source_translation_classification",
+    "lean_files": [
+      "Paper2/Certificates/Q8AtlasUnnormalized.lean"
+    ],
+    "mapping_note": "Actual arbitrary residual perfect matching families have translation form after proved initial normalization and port relabeling; there is no standard-root assumption.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "A.10",
+    "kind": "proposition",
+    "title": "Coefficients on affine planes",
+    "labels": [
+      "prop:cert-q8-canonical-support",
+      "eq:cert-q8-canonical-swap-system",
+      "eq:cert-q8-canonical-coefficients"
+    ],
+    "source_line": 6655,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.SourceFaithful.SourceStatements.AppendixSupport.source_A_10"
+    ],
+    "mapping_kind": "direct_source_statement",
+    "mapping_note": "The literal complex swap-system assumptions imply one shared nonzero coefficient on the fourteen weight-four xor-zero planes and zero on all fifty-six nonplanes. The wrapper includes the exact support iff, both printed counts, the actual nonplane exchange graph connectedness and odd triangle, and connectedness of the actual plane/canonical unordered-port-pair incidence graph. Every graph adjacency is the source adjacency; no external verification-script success is assumed.",
+    "lean_files": [
+      "Paper2/SourceFaithful/SourceStatements/AppendixSupportStatement.lean",
+      "Paper2/SourceFaithful/SourceStatements/AppendixPlaneIncidence.lean",
+      "Paper2/SourceFaithful/SourceStatements/AppendixNonplaneGraph.lean"
+    ],
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  },
+  {
+    "number": "A.11",
+    "kind": "theorem",
+    "title": "Affine-plane coefficients",
+    "labels": [
+      "thm:cert-q8-canonical-support-interface"
+    ],
+    "source_line": 6752,
+    "referenced_labels": [],
+    "lean_declarations": [
+      "Paper2.SourceFaithful.SourceStatements.AppendixSupport.source_A_11",
+      "Paper2.Certificates.Q8.Atlas.scalar_central_of_labeled_deck"
+    ],
+    "mapping_kind": "direct_source_statement",
+    "lean_files": [
+      "Paper2/SourceFaithful/SourceStatements/AppendixSupportStatement.lean",
+      "Paper2/Certificates/Q8LabeledDeck.lean"
+    ],
+    "mapping_note": "The literal complex swap-system endpoint gives one common nonzero coefficient exactly on the fourteen affine planes, together with support iff and the plane count. The actual labeled-deck theorem independently derives that coefficient system from the literal tensor contractions and returns the complete central Reed–Muller table.",
+    "source": "manuscript/paper.tex",
+    "scope": "required"
+  }
+]

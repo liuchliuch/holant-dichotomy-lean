@@ -1,0 +1,36 @@
+{
+  "arxiv_id": "2610.00081",
+  "version": "v1",
+  "title": "A Full Complexity Dichotomy for Complex-Valued Boolean Holant Problems",
+  "authors": [
+    "Chenghua Liu",
+    "Boning Meng",
+    "Juqiu Wang"
+  ],
+  "abstract_url": "https://arxiv.org/abs/2610.00081v1",
+  "source_url": "https://arxiv.org/src/2610.00081v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.00081v1",
+  "source_archive_sha256": "912d5f00c906002bae7d3db9ffa6d5b0cfa1fccc2b7efc2803e0e537136b196d",
+  "original_tex_name": "paper2-full-holant-dichotomy.tex",
+  "files": {
+    "paper.tex": "2cf2792c9828539fb3294d7556b58eb8eae4103ccacf4bdde36e0922e74c2597",
+    "paper2-full-holant-dichotomy.bib": "32b988b93e142dc780937b788b7febbc7445b482f0724719439b1b06a80947ae",
+    "paper.pdf": "0f73052fe846da9197b1388536d2290f8532a8f2c23939302771981a9f910bd4"
+  },
+  "verification": {
+    "official_pdf_download_matches_pinned_sha256": true,
+    "pdf_pages": 83,
+    "source_build_command": "latexmk -pdf -interaction=nonstopmode -halt-on-error paper.tex",
+    "source_build_exit_code": 0,
+    "source_build_pages": 83,
+    "source_build_final_warnings": 0,
+    "official_pdf_visually_checked_pages": [
+      1,
+      2,
+      20,
+      42,
+      63,
+      83
+    ]
+  }
+}
