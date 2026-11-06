@@ -39,7 +39,10 @@ Generated probe files and diagnostics remain under `.lake/verification/`.
 ## Compare statements independently
 
 [Verification/Challenge.lean](../Verification/Challenge.lean) states the three
-main theorem specifications: manuscript Theorems 1.1, 9.1 and 9.2.
+main theorem specifications: short Theorem 1.1 / full Theorem F.1.1, and full
+Theorems F.10.1 and F.10.3. The first specification is the ordinary-coordinate
+statement printed in the manuscript; native-X recognition and classification
+are checked separately by the third specification.
 [Verification/Solution.lean](../Verification/Solution.lean) gives proofs with
 the same declaration names using the public theorems. Their separate modules
 allow the specifications to be inspected without reading the proof bodies.
@@ -87,13 +90,18 @@ numbered auxiliary result.
 ## Check source correspondence
 
 [STATEMENTS.md](STATEMENTS.md) gives the human-readable index;
-[STATEMENT_LEDGER.json](STATEMENT_LEDGER.json) records all 99 numbered
+[STATEMENT_LEDGER.json](STATEMENT_LEDGER.json) records all 94 numbered
 manuscript environments and every mapped declaration. Its `scope` field
-distinguishes the 85 required entries from twelve expository remarks and the
-two deferred external CSP references.
+distinguishes the 86 required entries from eight expository remarks. This
+includes the three short-paper statements; repeated short/full occurrences
+are counted separately. No old deferred CSP row is carried into this inventory.
 
 The ledger preserves exact source numbering, titles, LaTeX labels, references
-and source locations. It distinguishes direct statements, stronger results
+and source locations. `scripts/manuscript.py` independently extracts these
+fields from the pinned TeX, including the `F.` full-paper and `F.A.` appendix
+prefixes; `scripts/check.py` rejects discrepancies. The lightweight negative
+controls in `scripts/test_manuscript.py` exercise stale numbers, lines, labels,
+references, titles and omitted rows. The ledger distinguishes direct statements, stronger results
 and proved component chains. In particular, a stronger theorem may establish
 one allowed terminal outcome of a printed disjunction without separately
 providing every alternative construction. The mapping notes record those
@@ -103,13 +111,17 @@ Reviewing a correspondence means checking the actual Lean hypotheses,
 quantifier order, definitions and conclusion against the manuscript. Shared
 basis matrices, ordered ports, scalar factors, zero/nullary cases, finite
 languages and computational encoding conventions are part of that comparison.
-The manuscript is the pinned arXiv v1 source; its provenance is recorded with
-the manuscript files.
+The manuscript is the byte-preserved Overleaf export of 6 November 2026,
+with SHA-256 `0cbcd66f3790e5a74fed14fb51294385cda202acedea4c169d093c4492289e93`.
+Its newly compiled 98-page PDF and historical arXiv v1 provenance are recorded
+with the manuscript files. Historical validation receipts and old declaration
+numbers do not certify this snapshot; every release must rerun the checks.
 
 ## Continuous integration
 
 GitHub Actions builds all retained project sources on Ubuntu 24.04 using four
-build workers, then checks the 179 mapped and public Comparator declarations.
+build workers, then checks every distinct required ledger declaration and all
+three public Comparator declarations.
 A separate job runs the pinned official Comparator and all three rejection
 controls. It verifies the source commit and SHA-256 hashes of the shared build
 before using it. The complete build starts without project compilation products;

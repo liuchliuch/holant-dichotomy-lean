@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "Please cite the accompanying manuscript when using this formalization."
+message: "Please cite the accompanying manuscript when using this formalization; the audited source is the STOC 2027 submission snapshot exported on 2026-11-06."
 type: software
 repository-code: "https://github.com/liuchliuch/holant-dichotomy-lean"
 title: "A Full Complexity Dichotomy for Boolean Holant in Lean"
@@ -17,7 +17,8 @@ preferred-citation:
   year: 2026
   journal: arXiv
   doi: "10.48550/arXiv.2610.00081"
-  url: "https://arxiv.org/abs/2610.00081v1"
+  url: "https://arxiv.org/abs/2610.00081"
+  notes: "The formalization targets the STOC 2027 submission snapshot exported on 2026-11-06; see manuscript/provenance.json for exact source and PDF hashes."
   authors:
     - family-names: Liu
       given-names: Chenghua

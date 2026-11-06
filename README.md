@@ -2,7 +2,11 @@
 
 A Lean formalization of *A Full Complexity Dichotomy for Complex-Valued Boolean
 Holant Problems* by Chenghua Liu, Boning Meng and Juqiu Wang,
-[arXiv:2610.00081v1](https://arxiv.org/abs/2610.00081).
+[arXiv:2610.00081](https://arxiv.org/abs/2610.00081). The pinned manuscript is
+the **STOC 2027 submission snapshot exported from Overleaf on 6 November 2026**,
+including both the short paper and the embedded full paper. Its exact source
+hash and historical arXiv provenance are recorded in
+[manuscript/provenance.json](manuscript/provenance.json).
 
 The public main theorem classifies the ordinary and native-X Holant problems
 for every valid finite language of algebraic signature tables. It includes
@@ -38,11 +42,19 @@ can take substantial time and memory even with the mathlib cache available.
 ```lean
 import Paper2
 
-#check Paper2.PublicDichotomy.main_theorem_with_native_recognition
-#check Paper2.PublicDichotomy.theorem_9_2
-#check Paper2.SourceFaithful.Synthesis.theorem_9_1_public
+#check Paper2.STOC2027.full_dichotomy
+#check Paper2.STOC2027.mountain_dichotomy
+#check Paper2.STOC2027.native_dichotomy
+#check Paper2.STOC2027.mountain_construction
+#check Paper2.STOC2027.eo_output_hardness
+#check Paper2.STOC2027.endpoint_normalization
 #check Paper2.SourceFaithful.SourceStatements.OddDihedralSixPort.source_A_1
 ```
+
+These entry points match short Theorem 1.1 / full Theorem F.1.1, full
+Theorems F.10.1 and F.10.3, short Lemmas 3.1 and 5.1, and full Lemma F.9.11,
+respectively. Earlier numbered API names remain available for compatibility;
+their numbers refer to the historical arXiv v1 manuscript.
 
 The main result covers the original graph semantics, including zero, nullary,
 repeated and mixed-arity signatures. Complexity bounds fix the signature
@@ -55,17 +67,18 @@ membership and high-height divisibility assumptions.
 
 - [Manuscript](manuscript/paper.pdf) and its [TeX source](manuscript/paper.tex).
 - [Statement guide](docs/STATEMENTS.md): the numbered source-to-Lean map and its
-  exact scope qualifications.
-- [Machine-readable ledger](docs/STATEMENT_LEDGER.json): all 99 numbered source
-  environments, including 85 required proof/definition entries.
+  exact scope qualifications and changes from the previous source.
+- [Machine-readable ledger](docs/STATEMENT_LEDGER.json): all 94 numbered source
+  environments, including 86 required proof/definition entries.
 - [Verification guide](docs/VERIFICATION.md): independent statement comparison,
   proof checking and release validation.
 
-The scope comprises **80 mathematical results and five definitions**. Twelve
-expository remarks are indexed separately. The independently cited CSP
-classifications 2.16 and 2.17 are deferred; they are unused by the public main
-proof. Some source conclusions are covered by stronger theorems or by several
-proved components, as recorded in the ledger.
+The scope comprises **81 mathematical result occurrences and five definitions**;
+the short paper repeats results proved in the full paper. Eight expository
+remarks are indexed separately. Some source conclusions are covered by stronger
+theorems or by several proved components, as recorded in the ledger. The checker
+verifies the inventory directly against the current TeX, including full-paper
+and appendix prefixes, source lines, titles, labels and referenced labels.
 
 The three main statements are also separated into a trusted
 [challenge](Verification/Challenge.lean) and a proved

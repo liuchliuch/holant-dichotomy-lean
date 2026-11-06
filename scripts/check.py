@@ -18,6 +18,9 @@ import re
 import subprocess
 import sys
 
+sys.dont_write_bytecode = True
+from manuscript import correspondence_issues
+
 ROOT = Path(__file__).resolve().parents[1]
 STANDARD_AXIOMS = {"propext", "Classical.choice", "Quot.sound"}
 IMPORT = re.compile(r'^\s*(?:(?:public|meta)\s+)*import\s+(.+)$', re.M)
@@ -265,18 +268,25 @@ def check_sources() -> tuple[dict, list[str], dict[str, Path]]:
         issues.append('Reference challenge is reachable from a proof environment')
     if SOLUTION in challenge:
         issues.append('Reference challenge imports the solution')
-    proof_imports = {name for name in challenge if name.startswith('Paper2.SourceFaithful.')
+    proof_imports = {name for name in challenge if name.startswith(('Paper2.SourceFaithful.',
+                                                                  'Paper2.STOC2027'))
                      or name in {'Paper2', 'Paper2.PublicNativeClassification'}}
     if proof_imports:
         issues.append('Challenge imports classification proofs: ' + ', '.join(sorted(proof_imports)))
     if set(modules) - retained != {CHALLENGE, SOLUTION}:
         issues.append('Unexpected verification or unrelated Lean module')
     provenance = json.loads((ROOT / 'manuscript/provenance.json').read_text())
-    if (provenance['arxiv_id'], provenance['version']) != ('2610.00081', 'v1'):
-        issues.append('Manuscript provenance must identify arXiv 2610.00081v1')
+    if (provenance['arxiv_id'], provenance['original_tex_name'], provenance['downloaded_utc']) != (
+            '2610.00081', 'stoc2027-HOL.tex', '2026-11-06T14:23:17.798488+00:00'):
+        issues.append('Manuscript provenance must identify the audited STOC Overleaf snapshot')
+    expected_tex = '0cbcd66f3790e5a74fed14fb51294385cda202acedea4c169d093c4492289e93'
+    if provenance['source_snapshot_sha256'] != expected_tex:
+        issues.append('Unexpected target manuscript snapshot')
     manuscript_files = provenance['files']
-    if set(manuscript_files) != {'paper.tex', 'paper2-full-holant-dichotomy.bib', 'paper.pdf'}:
-        issues.append('Expected the pinned manuscript TeX, bibliography and PDF')
+    if set(manuscript_files) != {'paper.tex', 'paper.pdf'}:
+        issues.append('Expected the self-contained manuscript TeX and its rebuilt PDF')
+    if manuscript_files.get('paper.tex') != expected_tex:
+        issues.append('Distributed TeX must retain the exact audited snapshot bytes')
     for name, expected in manuscript_files.items():
         path = (ROOT / 'manuscript' / name).resolve()
         if not path.is_relative_to(ROOT / 'manuscript') or not path.is_file():
@@ -284,16 +294,15 @@ def check_sources() -> tuple[dict, list[str], dict[str, Path]]:
         elif digest(path) != expected:
             issues.append(f'Manuscript checksum mismatch: {name}')
     rows = json.loads((ROOT / 'docs/STATEMENT_LEDGER.json').read_text())
+    issues.extend(correspondence_issues((ROOT / 'manuscript/paper.tex').read_text(), rows))
     required = [row for row in rows if row['scope'] == 'required']
     scopes = Counter(row['scope'] for row in rows)
-    if len(rows) != 99 or len({row['number'] for row in rows}) != 99:
-        issues.append('Expected 99 distinct manuscript rows')
-    if scopes != {'required': 85, 'expository': 12, 'deferred': 2}:
-        issues.append('Expected 85 required, 12 expository and two deferred rows')
+    if len(rows) != 94 or len({row['number'] for row in rows}) != 94:
+        issues.append('Expected 94 distinct short/full manuscript rows')
+    if scopes != {'required': 86, 'expository': 8}:
+        issues.append('Expected 86 required and eight expository rows')
     if sum(row['kind'] == 'definition' for row in required) != 5:
-        issues.append('Expected five required definitions and 80 mathematical results')
-    if {row['number'] for row in rows if row['scope'] == 'deferred'} != {'2.16', '2.17'}:
-        issues.append('Only external results 2.16 and 2.17 are deferred')
+        issues.append('Expected five required definitions and 81 mathematical results')
     names = []
     for row in required:
         if not row.get('lean_declarations') or not row.get('lean_files'):
@@ -306,8 +315,8 @@ def check_sources() -> tuple[dict, list[str], dict[str, Path]]:
             module = source.removesuffix('.lean').replace('/', '.')
             if module not in public:
                 issues.append(f'Ledger file outside public closure: {source}')
-    if len(names) != 196 or len(set(names)) != 176:
-        issues.append('Expected 196 mappings covering 176 distinct required declarations')
+    if len(names) != 199 or len(set(names)) != 173:
+        issues.append('Expected 199 mappings covering 173 distinct required declarations')
     config = json.loads((ROOT / 'Verification/comparator.json').read_text())
     if config['challenge_module'] != CHALLENGE or config['solution_module'] != SOLUTION:
         issues.append('Unexpected comparator modules')
@@ -332,6 +341,9 @@ def check_sources() -> tuple[dict, list[str], dict[str, Path]]:
         'source_snapshot_sha256': hashlib.sha256(json.dumps(source_snapshot(files), sort_keys=True).encode()).hexdigest(),
         'ledger_sha256': digest(ROOT / 'docs/STATEMENT_LEDGER.json'),
         'manuscript_files_verified': len(manuscript_files),
+        'manuscript_inventory_verified': not correspondence_issues(
+            (ROOT / 'manuscript/paper.tex').read_text(), rows),
+        'manuscript_snapshot_sha256': expected_tex,
     }
     return report, names, {name: modules[name] for name in public | solution}
 

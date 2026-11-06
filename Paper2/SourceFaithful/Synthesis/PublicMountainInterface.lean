@@ -8,8 +8,10 @@ namespace Paper2.SourceFaithful.Synthesis
 open Paper2.Tractable Paper2.ExactInput
 noncomputable section
 
-/-- Source Theorem 9.1 with the manuscript's strict public output convention.
-The original finite language may contain zero and nullary rows. -/
+/-- Historical arXiv-v1 Theorem 9.1, now STOC full Theorem F.10.1, with the
+manuscript's strict public output convention. The original finite language may
+contain zero and nullary rows. The current public entry is
+`Paper2.STOC2027.mountain_dichotomy`. -/
 theorem theorem_9_1_public
     (L : Language) {d : ℕ}
     (heven : ∀ f ∈ L.family, Even f.1)

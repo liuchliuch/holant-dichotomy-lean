@@ -10,8 +10,9 @@ namespace Paper2.PublicDichotomy
 open Paper2.Tractable Paper2.ExactInput Paper2.Problem
 noncomputable section
 
-/-- Source Theorem 9.2, including the effective decision of its applicable side
-from every valid exact native table list. -/
+/-- Historical arXiv-v1 Theorem 9.2, now STOC full Theorem F.10.3, including
+effective decision of its applicable side from every valid exact native table
+list. The current public entry is `Paper2.STOC2027.native_dichotomy`. -/
 theorem theorem_9_2 :
     ∃ r : NativeTractRecognizer,
       (∀ raw : RawLanguage, ∀ hraw : raw.Valid,

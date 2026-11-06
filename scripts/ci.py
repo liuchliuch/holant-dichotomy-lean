@@ -112,6 +112,7 @@ def main():
             raise RuntimeError('Unexpected Lean version: ' + version)
         report['lean_version'] = version
         if args.phase == 'build':
+            run('manuscript-negative-controls', [sys.executable, 'scripts/test_manuscript.py'])
             shutil.rmtree(ROOT / '.lake/build', ignore_errors=True)
             report['clean_project_build'] = True
             run('build', ['bash', 'scripts/build.sh'])

@@ -3,33 +3,47 @@
 **A Full Complexity Dichotomy for Complex-Valued Boolean Holant Problems**  
 Chenghua Liu, Boning Meng, and Juqiu Wang.
 
-This directory preserves the manuscript used for the Lean statement audit:
-[arXiv:2610.00081v1](https://arxiv.org/abs/2610.00081v1).
+This directory pins the STOC 2027 submission source exported from the authors'
+[Overleaf project](https://www.overleaf.com/project/6ad8d34ce8b959257628193d)
+on **6 November 2026 at 14:23 UTC**. It contains the short paper, shared
+bibliography, full paper, and TikZ figure in one self-contained source file.
+The associated preprint is [arXiv:2610.00081](https://arxiv.org/abs/2610.00081).
 
-- `paper.pdf` is the unmodified official 83-page PDF.
-- `paper.tex` is the unmodified TeX source, renamed from
-  `paper2-full-holant-dichotomy.tex` for convenience.
-- `paper2-full-holant-dichotomy.bib` is the original bibliography; its name
-  is retained because the TeX source refers to it directly.
-- `provenance.json` records the official source URLs and SHA-256 hashes.
+- `paper.tex` is the byte-for-byte exported `stoc2027-HOL.tex`, renamed for the
+  repository's stable manuscript path. Its SHA-256 is
+  `0cbcd66f3790e5a74fed14fb51294385cda202acedea4c169d093c4492289e93`.
+- `paper.pdf` is the 98-page local rendering of that exact source.
+- `provenance.json` records the export time, source archive and file hashes,
+  build and visual-review results, and the historical arXiv v1 provenance.
 
-The PDF, TeX source, and bibliography retain their authors' copyright.
-They are excluded from the repository's Apache-2.0 code license; see
-[LICENSE](LICENSE).
+The current main statements are short-paper Theorem 1.1 and full-paper
+Theorems F.1.1, F.10.1, and F.10.3. Full-paper numbers carry the `F.` prefix;
+page numbering restarts at `F-1` after the shared references. Statement maps
+must distinguish the short paper from the full paper.
+
+The previous arXiv v1 source, 83-page PDF, and separate bibliography remain
+available in Git history. They are not the current audited snapshot. The
+external bibliography is no longer needed because this source embeds it.
+
+The manuscript files retain their authors' copyright and are excluded from
+the repository's Apache-2.0 code license; see [LICENSE](LICENSE).
 
 ## Rebuild
 
-With a full TeX Live or MacTeX installation providing `latexmk`, pdfLaTeX,
-and BibTeX, run from this directory:
+With TeX Live or MacTeX providing `latexmk` and pdfLaTeX, run from the
+repository root:
 
 ```sh
-latexmk -pdf -interaction=nonstopmode -halt-on-error paper.tex
+mkdir -p .lake/manuscript-build
+latexmk -pdf -interaction=nonstopmode -halt-on-error \
+  -outdir=.lake/manuscript-build manuscript/paper.tex
 ```
 
-This produces a local PDF from the unchanged source. The distributed PDF
-is the official arXiv rendering and is preserved byte for byte, so a local
-build need not have an identical PDF hash. All diagrams are written in
-TikZ; no separate image assets are required.
+The output is `.lake/manuscript-build/paper.pdf`; the matching `.aux` file
+records all printed theorem numbers. No BibTeX run or additional source,
+bibliography, or image file is required. The checked build used pdfTeX
+1.40.26 from TeX Live 2024 and finished with no reference or box warnings.
+PDF metadata can make rebuilt PDF bytes differ even when the source matches.
 
 The manuscript's Code Availability section links to the authors'
 [original exact-calculation repository](https://github.com/liuchliuch/Full-Holant-Dichotomy).

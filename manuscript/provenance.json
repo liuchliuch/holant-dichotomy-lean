@@ -1,36 +1,81 @@
 {
   "arxiv_id": "2610.00081",
-  "version": "v1",
+  "version": "STOC 2027 submission snapshot, 2026-11-06",
   "title": "A Full Complexity Dichotomy for Complex-Valued Boolean Holant Problems",
   "authors": [
     "Chenghua Liu",
     "Boning Meng",
     "Juqiu Wang"
   ],
-  "abstract_url": "https://arxiv.org/abs/2610.00081v1",
-  "source_url": "https://arxiv.org/src/2610.00081v1",
-  "pdf_url": "https://arxiv.org/pdf/2610.00081v1",
-  "source_archive_sha256": "912d5f00c906002bae7d3db9ffa6d5b0cfa1fccc2b7efc2803e0e537136b196d",
-  "original_tex_name": "paper2-full-holant-dichotomy.tex",
+  "abstract_url": "https://arxiv.org/abs/2610.00081",
+  "source_url": "https://www.overleaf.com/project/6ad8d34ce8b959257628193d",
+  "downloaded_utc": "2026-11-06T14:23:17.798488+00:00",
+  "source_archive_sha256": "cb0f276cf7686ea4244444f247945ce0614ff54030ce8d9ccb3955450e538bc3",
+  "original_tex_name": "stoc2027-HOL.tex",
+  "source_snapshot_sha256": "0cbcd66f3790e5a74fed14fb51294385cda202acedea4c169d093c4492289e93",
+  "source_preserved_byte_for_byte": true,
   "files": {
-    "paper.tex": "2cf2792c9828539fb3294d7556b58eb8eae4103ccacf4bdde36e0922e74c2597",
-    "paper2-full-holant-dichotomy.bib": "32b988b93e142dc780937b788b7febbc7445b482f0724719439b1b06a80947ae",
-    "paper.pdf": "0f73052fe846da9197b1388536d2290f8532a8f2c23939302771981a9f910bd4"
+    "paper.tex": "0cbcd66f3790e5a74fed14fb51294385cda202acedea4c169d093c4492289e93",
+    "paper.pdf": "448d099e9320d86358a8f661e296ef1d583a2c3554bde3e924b85d63aaeaa21c"
   },
   "verification": {
-    "official_pdf_download_matches_pinned_sha256": true,
-    "pdf_pages": 83,
-    "source_build_command": "latexmk -pdf -interaction=nonstopmode -halt-on-error paper.tex",
+    "pdf_origin": "Locally compiled from the exact Overleaf source snapshot; not the arXiv v1 PDF.",
+    "source_build_command": "latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=.lake/manuscript-build manuscript/paper.tex",
     "source_build_exit_code": 0,
-    "source_build_pages": 83,
+    "source_build_pages": 98,
+    "source_build_engine": "pdfTeX 1.40.26 (TeX Live 2024)",
     "source_build_final_warnings": 0,
-    "official_pdf_visually_checked_pages": [
-      1,
-      2,
-      20,
-      42,
-      63,
-      83
-    ]
+    "source_build_final_box_warnings": 0,
+    "pdf_visual_review": {
+      "contact_sheet_pages": "1-98",
+      "detail_pages": [
+        4,
+        87,
+        88
+      ],
+      "result": "No clipping, overlap, missing glyphs, or broken layout observed."
+    },
+    "current_numbering": {
+      "short_main": "1.1",
+      "full_main": "F.1.1",
+      "mountain": "F.10.1",
+      "native_structural": "F.10.3"
+    }
+  },
+  "historical_arxiv_v1": {
+    "arxiv_id": "2610.00081",
+    "version": "v1",
+    "title": "A Full Complexity Dichotomy for Complex-Valued Boolean Holant Problems",
+    "authors": [
+      "Chenghua Liu",
+      "Boning Meng",
+      "Juqiu Wang"
+    ],
+    "abstract_url": "https://arxiv.org/abs/2610.00081v1",
+    "source_url": "https://arxiv.org/src/2610.00081v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.00081v1",
+    "source_archive_sha256": "912d5f00c906002bae7d3db9ffa6d5b0cfa1fccc2b7efc2803e0e537136b196d",
+    "original_tex_name": "paper2-full-holant-dichotomy.tex",
+    "files": {
+      "paper.tex": "2cf2792c9828539fb3294d7556b58eb8eae4103ccacf4bdde36e0922e74c2597",
+      "paper2-full-holant-dichotomy.bib": "32b988b93e142dc780937b788b7febbc7445b482f0724719439b1b06a80947ae",
+      "paper.pdf": "0f73052fe846da9197b1388536d2290f8532a8f2c23939302771981a9f910bd4"
+    },
+    "verification": {
+      "official_pdf_download_matches_pinned_sha256": true,
+      "pdf_pages": 83,
+      "source_build_command": "latexmk -pdf -interaction=nonstopmode -halt-on-error paper.tex",
+      "source_build_exit_code": 0,
+      "source_build_pages": 83,
+      "source_build_final_warnings": 0,
+      "official_pdf_visually_checked_pages": [
+        1,
+        2,
+        20,
+        42,
+        63,
+        83
+      ]
+    }
   }
 }
